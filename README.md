@@ -2,4 +2,4 @@
 
 This repository contains code for an interactive information web app, created for the _Client-Side Web Development_ course at the UW iSchool.
 
-Group members: Jenny Suk
+Group members: Jenny Suk, Tianhui Zhou, Rachel He, Ximing Sun

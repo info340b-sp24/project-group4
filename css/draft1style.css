@@ -1,1 +1,135 @@
+* {
+    box-sizing: border-box;
 
+}
+
+.menu {
+    display: flex;
+}
+
+
+body {
+    font-family: Calibri, sans-serif;
+    font-size: 17px;
+}
+
+h1,
+h2 {
+    font-family: Calibri, sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+
+.material-icons {
+    position: relative;
+    top: 5px;
+}
+
+.container {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+
+p,
+dl {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    font-size: 18.6px;
+    background-color: #000000;
+    padding: 1.32rem;
+    padding-bottom: 1rem;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    margin: 0;
+    line-height: 125%;
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active {
+    color: red;
+    border-bottom: 0.4rem solid red;
+    transition: all 0.25s ease-out;
+}
+
+header {
+    color: white;
+    padding-top: 2.3rem;
+    padding-bottom: 0;
+    
+    background-color: white;
+}
+
+header img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 28%;
+}
+
+#menu {
+    background-color: #f0f0f0;
+}
+
+#menu img {
+    height: 200px;
+}
+
+#menu dt {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+#menu dd {
+    margin: 0;
+}
+
+footer {
+    color: white;
+    background-color: black;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.25;
+}
+
+footer p:last-of-type {
+    padding-top: 8px;
+}

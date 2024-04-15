@@ -51,9 +51,9 @@ nav {
     left: 0;
     width: 100%;
     color: white;
-    font-size: 18.6px;
+    font-size: 17.3px;
     background-color: #000000;
-    padding: 1.32rem;
+    padding: 1.12rem;
     padding-bottom: 1rem;
 }
 
@@ -83,8 +83,8 @@ nav a:hover,
 nav a:focus,
 nav a:active {
     color: red;
-    border-bottom: 0.4rem solid red;
-    transition: all 0.25s ease-out;
+    border-bottom: 0.3rem solid red;
+    transition: all 0.12s ease-out;
 }
 
 header {
@@ -99,7 +99,7 @@ header img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 28%;
+    width: 21.2%;
 }
 
 #menu {

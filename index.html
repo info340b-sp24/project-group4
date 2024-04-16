@@ -1,61 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Jenny Suk, Ximing Sun, Rachel He, Tianhui Zhou">
-    <meta name="description" content="Restaurant Website for Ridge Cupbop & Ramen">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="author"
+      content="Jenny Suk, Ximing Sun, Rachel He, Tianhui Zhou"
+    />
+    <meta
+      name="description"
+      content="Restaurant Website for Ridge Cupbop & Ramen"
+    />
 
     <title>Ridge Cupbob & Ramen</title>
-    <link rel="icon" type="image/x-icon" href="Images/RidgeCupbopRamenLogo.png">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="Images/RidgeCupbopRamenLogo.png"
+    />
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Raleway:ital,wght@0,300;1,300&display=swap , https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,300&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Raleway:ital,wght@0,300;1,300&display=swap , https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,300&display=swap"
+      rel="stylesheet"
+    />
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/draft1style.css">
-</head>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/draft1style.css" />
+  </head>
 
-<body>
+  <body>
     <nav>
-        <ul>
-            <li><a href="index.html">Menu</a></li>
-            <li><a href="order.html">Online Ordering</a></li>
-            <li><a href="reservations.html">Reservations</a></li>
-
-        </ul>
+      <ul>
+        <li><a href="index.html">Home/Menu</a></li>
+        <li><a href="order.html">Online Ordering</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+      </ul>
     </nav>
     <section class="watercolorBackground">
-    <header>
+      <header>
         <div class="container">
-            <!--<h1>Ridge Cupbop & Ramen</h1>-->
-            <img src="Images/RidgeCupbopRamenLogo.png" alt="Logo of Ridge Cupbob & Ramen">
+          <!--<h1>Ridge Cupbop & Ramen</h1>-->
+          <img
+            src="Images/RidgeCupbopRamenLogo.png"
+            alt="Logo of Ridge Cupbob & Ramen"
+          />
         </div>
-    </header>
-    <main>
+      </header>
+      <main>
         <section id="menu">
-            <div class="container">
-                <h2>Menu</h2>
-                <dl>
-                    <dt>Bibim Bap</dt>
-                    <dd>
-                        <img src="Images/Bibim_Bap.jpg" alt="Bibim Bap">
-                        <p>Blah blah description of food something price</p>
-                    </dd>
-                </dl>
+          <div class="container">
+            <h2>Menu</h2>
+            <form>
+              <input
+                type="checkbox"
+                id="glutenfree"
+                name="glutenfree"
+                class="checkbox"
+                value="GlutenFree"
+              />
+              <label for="glutenfree">Gluten Free Options Available</label
+              >
+              <input
+                type="checkbox"
+                id="vegetarian"
+                name="vegetarian"
+                                class="checkbox"
+
+                value="Vegetarian"
+              />
+              <label for="vegatarian">Vegatarian Options Available</label>
+            </form>
+            <div class="flexbox">
+            <div>
+              <p class="menuItem">Bibim Bap</p>
+                <img src="Images/Bibim_Bap.jpg" alt="Bibim Bap" />
+                <p>Blah blah description of food something price</p>
+              </div>
             </div>
+          </div>
         </section>
-    </main>
+      </main>
     </section>
     <footer>
-        <div class="container">
-            <p>Open Monday - Saturday 11:30am - 8pm</p>
-            <p>Closed Sunday</p>
-            <p><a href="tel:425-888-7827"><span class="material-icons">phone</span> 425-888-7827</a></p>
-            <p><span class="material-icons" aria-label="Address">store</span> 823 Center Blvd SE Snoqualmie, WA 98065</a></p>
-            <p>&copy; Ridge Cupbop & Ramen 2024</p>
-        </div>
+      <div class="container">
+        <p>Open Monday - Saturday 11:30am - 8pm</p>
+        <p>Closed Sunday</p>
+        <p>
+          <a href="tel:425-888-7827"
+            ><span class="material-icons">phone</span> 425-888-7827</a
+          >
+        </p>
+        <p>
+          <span class="material-icons" aria-label="Address">store</span> 823
+          Center Blvd SE Snoqualmie, WA 98065
+        </p>
+        <p>&copy; Ridge Cupbop & Ramen 2024</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

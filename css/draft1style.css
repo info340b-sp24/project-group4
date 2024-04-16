@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-
 }
 
 #menu {
@@ -29,6 +28,11 @@
     flex: 0 0 250px;
     margin: 0.5rem;
     border-radius: 10px;
+}
+
+.flexbox img {
+    width: 250px;
+    height: 250px;
 }
 
 
@@ -122,7 +126,8 @@ header {
 .watercolorBackground {
     background-image: url("../Images/Background_Watercolor.jpg");
         background-size: cover;
-        background-position: center;
+        background-position: center fixed;
+        background-attachment: fixed;
 }
 
 

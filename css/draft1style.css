@@ -141,3 +141,21 @@ footer p {
 footer p:last-of-type {
     padding-top: 8px;
 }
+
+/*media queries */
+@media (min-width: 598px) {
+}
+
+@media (min-width: 768px)
+{
+    html {
+        height: 100%;
+    }
+}
+
+@media (min-width: 992px)
+{
+
+}
+@media (min-width: 1200px) {
+}

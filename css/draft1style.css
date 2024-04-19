@@ -20,7 +20,8 @@
 
 .flexbox {
     display: flex;
-    flex-wrap: wrap;
+    flex-shrink: auto;
+    overflow-x: scroll;
     justify-content: center;
 }
 
@@ -31,6 +32,23 @@
 }
 
 .flexbox img {
+    width: 250px;
+    height: 250px;
+}
+
+.flexboxOrder {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+.flexboxOrder div {
+    flex: 0 0 250px;
+    margin: 0.5rem;
+    border-radius: 10px;
+}
+
+.flexboxOrder img {
     width: 250px;
     height: 250px;
 }
@@ -143,9 +161,6 @@ header img{
     background-color: rgba(100, 100, 100, 0.45);
 }
 
-#menu img {
-    height: 200px;
-}
 
 #menu dt {
     font-size: 1.25rem;

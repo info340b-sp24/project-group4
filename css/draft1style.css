@@ -61,7 +61,7 @@ h1 {
 }
 
 .container {
-    max-width: 960px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
     padding: 1rem;
@@ -187,4 +187,56 @@ footer p:last-of-type {
 
 }
 @media (min-width: 1200px) {
+}
+
+/* style for reservation */
+h3 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333; /* A dark gray color for a modern look */
+    font-size: 2rem; /* Responsive font size */
+    text-transform: uppercase; /* Makes the text uppercase for emphasis */
+    letter-spacing: 2px; /* More spacing between letters for a tech feel */
+    background-color: transparent; /* No background for a clean look */
+    padding-top: 50px;
+    border-bottom: 3px solid #333; /* A solid line under the text for definition */
+    display: inline-block; /* Only as wide as it needs to be */
+    margin: 0 auto; /* Center in the container */
+    text-shadow: 2px 2px 4px rgba(237, 240, 240, 0.954); /* Soft shadow for depth */
+}
+
+
+.infrastructure svg {
+    stroke: #000000;
+    stroke-width: 0.2%;
+    fill: #d3d3d3;
+}
+
+.container svg{
+    width:100%;
+    height: auto;
+}
+
+#tableSelection {
+    color: white;
+    background-color: rgba(100, 100, 100, 0.45);
+}
+
+#tableSelection img {
+    height: 200px;
+}
+
+#tableSelection dt {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+#tableSelection dd {
+    margin: 0;
+}
+
+g.chooseSeats:hover path,
+g.chooseSeats:hover rect {
+    fill: rgba(128, 255, 0, 0.527);
+    stroke: none;
 }

@@ -18,37 +18,19 @@
 }
 
 
-.flexbox {
+.flexbox, .flexboxOrder {
     display: flex;
-    flex-shrink: auto;
-    overflow-x: scroll;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
-.flexbox div {
+.flexbox div, .flexboxOrder div {
     flex: 0 0 250px;
     margin: 0.5rem;
     border-radius: 10px;
 }
 
-.flexbox img {
-    width: 250px;
-    height: 250px;
-}
-
-.flexboxOrder {
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: center;
-}
-
-.flexboxOrder div {
-    flex: 0 0 250px;
-    margin: 0.5rem;
-    border-radius: 10px;
-}
-
-.flexboxOrder img {
+.flexbox img, .flexboxOrder img {
     width: 250px;
     height: 250px;
 }
@@ -186,23 +168,7 @@ footer p:last-of-type {
     padding-top: 8px;
 }
 
-/*media queries */
-@media (min-width: 598px) {
-}
 
-@media (min-width: 768px)
-{
-    html {
-        height: 100%;
-    }
-}
-
-@media (min-width: 992px)
-{
-
-}
-@media (min-width: 1200px) {
-}
 
 /* style for reservation */
 h3 {
@@ -255,3 +221,24 @@ g.chooseSeats:hover rect {
     fill: rgba(128, 255, 0, 0.527);
     stroke: none;
 }
+
+
+/*media queries */
+@media (min-width: 598px) {}
+
+@media (min-width: 768px) {
+    html {
+        height: 100%;
+    }
+
+    .flexbox{
+        flex-shrink: auto;
+        flex-wrap:nowrap;
+        overflow-x: scroll;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}

@@ -6,7 +6,9 @@
     display: flex;
     color: white;
 }
-
+#menu .menuItem {
+    font-size: 18px;
+}
 #menu form {
     accent-color: #5dba47;
 }
@@ -38,13 +40,13 @@
 
 body {
     font-family: Calibri, sans-serif;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 h1,
 h2 {
     font-family: Calibri, sans-serif;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 40px;
     margin-top: 0;
     margin-bottom: 0.5rem;
@@ -140,7 +142,7 @@ header img{
 
 #menu {
     
-    background-color: rgba(100, 100, 100, 0.45);
+    background-color: rgba(70, 100, 100, 0.45);
 }
 
 
@@ -235,7 +237,7 @@ g.chooseSeats:hover rect {
         flex-shrink: auto;
         flex-wrap:nowrap;
         overflow-x: scroll;
-        justify-content: center;
+        justify-content: left;
     }
 }
 

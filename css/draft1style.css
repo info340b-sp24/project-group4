@@ -56,6 +56,12 @@ h1 {
     font-size: 3.5rem;
 }
 
+h4 {
+    font-family: Calibri, sans-serif; 
+    font-style: italic; 
+    color: black; 
+}
+
 
 .material-icons {
     position: relative;
@@ -244,3 +250,18 @@ g.chooseSeats:hover rect {
 @media (min-width: 992px) {}
 
 @media (min-width: 1200px) {}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px; 
+    padding: 20px; 
+}
+
+.gallery-container img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    width: 225px; 
+    height: auto; 
+}

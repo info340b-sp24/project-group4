@@ -1,7 +1,24 @@
+/*General page structure begins*/
 * {
     box-sizing: border-box;
 }
+.container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+.watercolorBackground {
+    background-image: url("../Images/Background_Watercolor.jpg");
+    background-size: cover;
+    background-position: center fixed;
+    background-attachment: fixed;
+}
 
+/*General page structure ends*/
+
+
+/*Nav bar begins*/
 nav {
     position: fixed;
     top: 0;
@@ -23,20 +40,38 @@ nav .material-icons {
     font-size: 35px;
     padding: 0;
 }
-
 nav ul {
     padding: 0;
     margin: 0;
 }
+/*Nav bar ends*/
 
 
+/*Header begins*/
+header {
+    color: black;
+    padding-top: 4rem;
+    padding-bottom: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 21.2%;
+}
+/*Header ends*/
+
+
+/*Welcome begins*/
 #welcome {
     display: none;
 }
+/*Welcome ends*/
 
 
-
-
+/*Menu begins*/
 #menu {
     display: flex;
     color: black;
@@ -55,29 +90,29 @@ nav ul {
     top: 4.3px;
 }
 
-.flexbox, .flexboxOrder {
+.flexbox, .flexboxOrder { /*for menu in home and order page*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .flexbox div, .flexboxOrder div {
     flex: 0 0 150px;
     margin: 0.5rem;
     border-radius: 10px;
 }
-
 .flexbox img, .flexboxOrder img {
     width: 150px;
     height: 150px;
 }
+/*Menu ends*/
 
 
+
+/*Fonts begins*/
 body {
     font-family: Calibri, sans-serif;
     font-size: 16px;
 }
-
 h1,
 h2 {
     font-family: Calibri, sans-serif;
@@ -85,70 +120,28 @@ h2 {
     margin-top: 0;
     margin-bottom: 0.5rem;
 }
-
 h1 {
     font-size: 40px;
 }
 h2 {
     font-size: 35px;
 }
-
-
-
 .material-icons {
     position: relative;
     top: 5px;
 }
-
-.container {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem;
-}
-
-p,
-dl {
+p {
     margin-top: 0;
     margin-bottom: 1rem;
 }
-
-
-
-header {
-    color: black;
-    padding-top: 4rem;
-    padding-bottom: 0;
-    background-color: rgba(255, 255, 255, 0.3);
+button {
+    border: none;
 }
-header img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 21.2%;
-}
+/*Fonts ends*/
 
-.watercolorBackground {
-    background-image: url("../Images/Background_Watercolor.jpg");
-        background-size: cover;
-        background-position: center fixed;
-        background-attachment: fixed;
-}
 
-.floating-panel {
-    display: none;
-}
-
-.orderCartMobile {
-    position: fixed;
-    bottom:20px;
-    right: 20px;
-}
-.orderCartMobile button {
-    background-color: white;
-}
-
- footer a {
+/* Footer begins*/
+footer a {
     text-decoration: none;
     color: white;
     margin: 0;
@@ -168,10 +161,25 @@ footer p {
 footer p:last-of-type {
     padding-top: 8px;
 }
+/* Footer ends*/
 
 
+/*ORDER PAGE*/
+.floating-panel {
+    display: none;
+}
 
-/* style for reservation */
+.orderCartMobile {
+    position: fixed;
+    bottom:20px;
+    right: 20px;
+}
+.orderCartMobile button {
+    background-color: white;
+}
+
+
+/* RESERVATION PAGE */
 h3 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #333; /* A dark gray color for a modern look */
@@ -186,14 +194,12 @@ h3 {
     text-shadow: 2px 2px 4px rgba(237, 240, 240, 0.954); /* Soft shadow for depth */
 }
 
-
 .infrastructure svg {
     stroke: #000000;
     stroke-width: 0.2%;
     fill: #d3d3d3;
 
 }
-
 
 .container svg{
     width:100%;
@@ -225,7 +231,7 @@ g.chooseSeats:hover rect {
     stroke: none;
 }
 
-
+/*GALLERY PAGE*/
 .gallery-container {
 
     display: flex;
@@ -243,7 +249,7 @@ g.chooseSeats:hover rect {
 }
 
 
-/*media queries */
+/* MEDIA QUERIES */
 @media (min-width: 598px) {
     .flexbox {
         flex-shrink: auto;
@@ -266,42 +272,43 @@ g.chooseSeats:hover rect {
         justify-content: left;
     }
 
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            color: white;
-            font-size: 17.3px;
-            background-color: #000000;
-            padding: 1.12rem;
-            padding-bottom: 1rem;
-        }
-        nav .navTitles {
-            display: inline-block;
-        }
-        nav button {
-            display: none;
-        }
-    
-    
-        nav li {
-            display: inline;
-            margin: 0 1rem;
-        }
-    
-        nav a {
-            color: white;
-            text-decoration: none;
-        }
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        color: white;
+        font-size: 17.3px;
+        background-color: #000000;
+        padding: 1.12rem;
+        padding-bottom: 1rem;
+    }
 
-        nav a:hover,
-        nav a:focus,
-        nav a:active {
-            color: #a8a58d;
-            border-bottom: 0.3rem solid #a8a58d;
-            transition: all 0.12s ease-out;
-        }
+    nav .navTitles {
+        display: inline-block;
+    }
+
+    nav button {
+        display: none;
+    }
+    
+    nav li {
+        display: inline;
+        margin: 0 1rem;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+    }
+
+    nav a:hover,
+    nav a:focus,
+    nav a:active {
+        color: #a8a58d;
+        border-bottom: 0.3rem solid #a8a58d;
+        transition: all 0.12s ease-out;
+    }
     header {
         padding-top: 2.3rem;
         position: auto;
@@ -363,19 +370,22 @@ g.chooseSeats:hover rect {
     .gallery-container img {
         width: 225px;
     }
-
+    .orderCartMobile {
+        display: none;
+    }
     .floating-panel {
         display: block;
     position: fixed;
     right: 30px;
     top: 400px;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     width: 350px;
     height: auto;
-}
+    }
 }
 
+/* unused media queries
 @media (min-width: 992px) {
     
 }
@@ -383,3 +393,4 @@ g.chooseSeats:hover rect {
 @media (min-width: 1200px) {
     
 }
+*/

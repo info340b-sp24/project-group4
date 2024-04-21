@@ -9,8 +9,9 @@
     padding: 1rem;
 }
 .watercolorBackground {
-    background-image: url("../Images/Background_Watercolor.jpg");
-    background-size: cover;
+    background-image: url("../Images/BgMobile.png");
+    background-size:contain;
+    background-repeat: no-repeat;
     background-position: center fixed;
     background-attachment: fixed;
 }
@@ -71,19 +72,19 @@ header img {
 /*Welcome ends*/
 
 
-/*Menu begins*/
-#menu {
+/*Main content (i.e. menu images) begins*/
+#mainContent {
     display: flex;
     color: black;
     background-color: rgba(255, 255, 255, 0.3);
 }
-#menu .menuItem {
+#mainContent .menuItem {
     font-size: 18px;
 }
-#menu form {
+#mainContent form {
     accent-color: #5dba47;
 }
-#menu .checkbox {
+#mainContent .checkbox {
     width: 17px;
     height:17px;
     position: relative;
@@ -104,7 +105,7 @@ header img {
     width: 150px;
     height: 150px;
 }
-/*Menu ends*/
+/*Main content ends*/
 
 
 
@@ -175,7 +176,8 @@ footer p:last-of-type {
     right: 20px;
 }
 .orderCartMobile button {
-    background-color: white;
+    background-color: black;
+    color: white;
 }
 
 
@@ -268,6 +270,13 @@ g.chooseSeats:hover rect {
         height: 100%;
     }
 
+        .watercolorBackground {
+            background-image: url("../Images/Background_Watercolor.jpg");
+            background-size: cover;
+            background-position: center fixed;
+            background-attachment: fixed;
+        }
+
     .flexbox {
         justify-content: left;
     }
@@ -357,9 +366,9 @@ g.chooseSeats:hover rect {
         height: 250px;
     }
 
-        #menu {
-            background-color: rgba(70, 100, 100, 0.45);
-            color: white;
+        #mainContent {
+    background-color: rgba(100, 100, 100, 0.45);
+                color: white;
         }
 
     .gallery-container { 

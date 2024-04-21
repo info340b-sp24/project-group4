@@ -2,6 +2,26 @@
     box-sizing: border-box;
 }
 
+#welcome {
+    color: white;
+    text-align: center;
+    accent-color: grey;
+}
+#welcome img {
+    width: 40px;
+    height: auto;
+}
+.image_button {
+    border-radius: 1rem;
+    padding: 5px 10px;
+    text-align: center;
+    align-items: center;
+    border: none;
+    text-decoration: none;
+    display: inline;
+    cursor: pointer;
+}
+
 #menu {
     display: flex;
     color: white;
@@ -232,7 +252,17 @@ g.chooseSeats:hover rect {
 
 
 /*media queries */
-@media (min-width: 598px) {}
+@media (min-width: 598px) {
+    .flexbox {
+        flex-shrink: auto;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        justify-content: flex-start;
+    }
+    .flexbox div {
+        margin-right: 10px;
+    }
+}
 
 @media (min-width: 768px) {
     html {
@@ -247,9 +277,17 @@ g.chooseSeats:hover rect {
     }
 }
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    html {
+        height: 100%;
+    }
+}
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    html {
+        height: 100%;
+    }
+}
 
 .gallery-container {
     display: flex;

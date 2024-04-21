@@ -29,6 +29,7 @@ nav ul {
     margin: 0;
 }
 
+
 #welcome {
     display: none;
 }
@@ -134,11 +135,18 @@ header img {
         background-attachment: fixed;
 }
 
+.floating-panel {
+    display: none;
+}
 
-
-
-
-
+.orderCartMobile {
+    position: fixed;
+    bottom:20px;
+    right: 20px;
+}
+.orderCartMobile button {
+    background-color: white;
+}
 
  footer a {
     text-decoration: none;
@@ -183,7 +191,9 @@ h3 {
     stroke: #000000;
     stroke-width: 0.2%;
     fill: #d3d3d3;
+
 }
+
 
 .container svg{
     width:100%;
@@ -216,9 +226,8 @@ g.chooseSeats:hover rect {
 }
 
 
-
-
 .gallery-container {
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center; 
@@ -323,22 +332,11 @@ g.chooseSeats:hover rect {
         display:block;
         color: white;
         text-align: center;
-        accent-color: grey;
     }
 
     #welcome img {
         width: 40px;
         height: auto;
-    }
-    .image_button {
-        border-radius: 1rem;
-        padding: 5px 10px;
-        text-align: center;
-        align-items: center;
-        border: none;
-        text-decoration: none;
-        display: inline;
-        cursor: pointer;
     }
 
     .flexbox div,
@@ -357,7 +355,7 @@ g.chooseSeats:hover rect {
             color: white;
         }
 
-    .gallery-container {
+    .gallery-container { 
         gap: 20px;
         padding: 20px;
     }
@@ -365,6 +363,17 @@ g.chooseSeats:hover rect {
     .gallery-container img {
         width: 225px;
     }
+
+    .floating-panel {
+        display: block;
+    position: fixed;
+    right: 30px;
+    top: 400px;
+    background-color: black;
+    color: white;
+    width: 350px;
+    height: auto;
+}
 }
 
 @media (min-width: 992px) {

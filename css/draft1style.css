@@ -38,8 +38,8 @@ nav ul {
 
 #menu {
     display: flex;
-    color: white;
-    background-color: rgba(70, 100, 100, 0.45);
+    color: black;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 #menu .menuItem {
     font-size: 18px;
@@ -80,20 +80,16 @@ body {
 h1,
 h2 {
     font-family: Calibri, sans-serif;
-    font-weight: 500;
-    font-size: 40px;
+    font-weight: 400;
     margin-top: 0;
     margin-bottom: 0.5rem;
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 40px;
 }
-
-h4 {
-    font-family: Calibri, sans-serif; 
-    font-style: italic; 
-    color: black; 
+h2 {
+    font-size: 35px;
 }
 
 
@@ -119,7 +115,7 @@ dl {
 
 
 header {
-    color: white;
+    color: black;
     padding-top: 4rem;
     padding-bottom: 0;
     background-color: rgba(255, 255, 255, 0.3);
@@ -226,14 +222,14 @@ g.chooseSeats:hover rect {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; 
-    gap: 20px; 
-    padding: 20px; 
+    gap: 3px; 
+    padding: 7px; 
 }
 
 .gallery-container img {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    width: 225px; 
+    width: 110px; 
     height: auto; 
 }
 
@@ -300,6 +296,7 @@ g.chooseSeats:hover rect {
     header {
         padding-top: 2.3rem;
         position: auto;
+        color: white;
     }
         header img {
             display: block;
@@ -307,6 +304,21 @@ g.chooseSeats:hover rect {
             margin-right: auto;
             width: 21.2%;
         }
+    h1,
+    h2 {
+        font-family: Calibri, sans-serif;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+
     #welcome {
         display:block;
         color: white;
@@ -338,6 +350,20 @@ g.chooseSeats:hover rect {
     .flexboxOrder img {
         width: 250px;
         height: 250px;
+    }
+
+        #menu {
+            background-color: rgba(70, 100, 100, 0.45);
+            color: white;
+        }
+
+    .gallery-container {
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .gallery-container img {
+        width: 225px;
     }
 }
 

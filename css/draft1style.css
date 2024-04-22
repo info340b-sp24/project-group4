@@ -189,7 +189,7 @@ h3 {
     letter-spacing: 2px;
     background-color: transparent;
     padding-top: 50px;
-    border-bottom: 3px solid #333; /
+    border-bottom: 3px solid #333; 
     display: inline-block; 
     margin: 0 auto;
     text-shadow: 2px 2px 4px rgba(237, 240, 240, 0.954); /* Soft shadow for depth */
@@ -242,6 +242,7 @@ g.chooseSeats:hover rect {
     padding: 0.5rem;
 }
 
+/*
 #reservationMobile .reservation-form h1,
 #reservationMobile .reservation-form p{
     color:white;
@@ -249,6 +250,7 @@ g.chooseSeats:hover rect {
     text-align: center;
     margin-bottom: 30px;
 }
+*/
 
 #reservationMobile .reservation-form form {
     margin-top: 20%;

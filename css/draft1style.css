@@ -184,15 +184,14 @@ footer p:last-of-type {
 /* RESERVATION PAGE */
 h3 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #333; /* A dark gray color for a modern look */
-    font-size: 2rem; /* Responsive font size */
-    text-transform: uppercase; /* Makes the text uppercase for emphasis */
-    letter-spacing: 2px; /* More spacing between letters for a tech feel */
-    background-color: transparent; /* No background for a clean look */
+    color: #333; 
+    font-size: 2rem; 
+    letter-spacing: 2px;
+    background-color: transparent;
     padding-top: 50px;
-    border-bottom: 3px solid #333; /* A solid line under the text for definition */
-    display: inline-block; /* Only as wide as it needs to be */
-    margin: 0 auto; /* Center in the container */
+    border-bottom: 3px solid #333; /
+    display: inline-block; 
+    margin: 0 auto;
     text-shadow: 2px 2px 4px rgba(237, 240, 240, 0.954); /* Soft shadow for depth */
 }
 
@@ -231,6 +230,42 @@ g.chooseSeats:hover path,
 g.chooseSeats:hover rect {
     fill: rgba(128, 255, 0, 0.527);
     stroke: none;
+}
+
+#tableSelection{
+    display: none;
+}
+
+/* reservation mobile */
+#reservationMobile{
+    align-items: center;
+    padding: 0.5rem;
+}
+
+#reservationMobile .reservation-form h1,
+#reservationMobile .reservation-form p{
+    color:white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#reservationMobile .reservation-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+#reservationMobile .reservation-form button {
+    background-color:green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#reservationMobile .reservation-form button:hover {
+    background-color: greeen;
 }
 
 /*GALLERY PAGE*/
@@ -391,6 +426,13 @@ g.chooseSeats:hover rect {
     color: black;
     width: 350px;
     height: auto;
+    }
+    #tableSelection{
+        display: block;
+    }
+
+    #reservationMobile{
+        display:none;
     }
 }
 

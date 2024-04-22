@@ -32,7 +32,7 @@ nav {
 nav .navTitles{
     display: none;
 }
-nav button {
+nav .hamburgerMenu {
     background-color: rgba(0, 0, 0, 0);  
     border: none; 
 }

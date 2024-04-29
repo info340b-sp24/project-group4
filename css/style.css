@@ -1,22 +1,450 @@
+/*General page structure begins*/
+* {
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+.watercolorBackground {
+    background-image: url("../Images/BgMobile.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center fixed;
+    background-attachment: fixed;
+}
+
+/*General page structure ends*/
+
+
+/*Nav bar begins*/
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    padding: 1.12rem;
+    padding-bottom: 1rem;
+}
+nav .navTitles{
+    display: none;
+}
+nav .hamburgerMenu {
+    background-color: rgba(0, 0, 0, 0);  
+    border: none; 
+}
+nav .material-icons {
+    color: white;
+    font-size: 35px;
+    padding: 0;
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+/*Nav bar ends*/
+
+
+/*Header begins*/
 header {
-    text-align: center;
+    color: black;
+    padding-top: 4rem;
+    padding-bottom: 0;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
-h1,h2 {
-    color: #B35900;
+header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 21.2%;
 }
-.author {
-    font-style: italic;
-    font-size: 14px;
-  }
-  
-.date {
-    font-size: 14px;
-}
-    
+/*Header ends*/
 
+
+/*Welcome begins*/
+#welcome {
+    display: none;
+}
+/*Welcome ends*/
+
+
+/*Main content (i.e. menu images) begins*/
+#mainContent {
+    display: flex;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+#mainContent .menuItem {
+    font-size: 18px;
+}
+#mainContent form {
+    accent-color: #5dba47;
+}
+#mainContent .checkbox {
+    width: 17px;
+    height:17px;
+    position: relative;
+    top: 4.3px;
+}
+
+.flexbox, .flexboxOrder { /*for menu in home and order page*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flexbox div, .flexboxOrder div {
+    flex: 0 0 150px;
+    margin: 0.5rem;
+    border-radius: 10px;
+}
+.flexbox img, .flexboxOrder img {
+    width: 150px;
+    height: 150px;
+}
+/*Main content ends*/
+
+
+
+/*Fonts begins*/
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-  }
+    font-family: Calibri, sans-serif;
+    font-size: 16px;
+}
+h1,
+h2 {
+    font-family: Calibri, sans-serif;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 35px;
+}
+.material-icons {
+    position: relative;
+    top: 5px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+button {
+    border: none;
+}
+/*Fonts ends*/
+
+
+/* Footer begins*/
+footer a {
+    text-decoration: none;
+    color: white;
+    margin: 0;
+    line-height: 125%;
+}
+
+footer {
+    color: white;
+    background-color: #464b30;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.25;
+}
+
+footer p:last-of-type {
+    padding-top: 8px;
+}
+/* Footer ends*/
+
+
+/*ORDER PAGE*/
+.floating-panel {
+    display: none;
+}
+
+.orderCartMobile {
+    position: fixed;
+    bottom:20px;
+    right: 20px;
+}
+.orderCartMobile button {
+    background-color: black;
+    color: white;
+}
+
+
+/* RESERVATION PAGE */
+h3 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333; 
+    font-size: 2rem; 
+    letter-spacing: 2px;
+    background-color: transparent;
+    padding-top: 50px;
+    border-bottom: 3px solid #333; 
+    display: inline-block; 
+    margin: 0 auto;
+    text-shadow: 2px 2px 4px rgba(237, 240, 240, 0.954); /* Soft shadow for depth */
+}
+
+.infrastructure svg {
+    stroke: #000000;
+    stroke-width: 0.2%;
+    fill: #d3d3d3;
+
+}
+
+.container svg{
+    width:100%;
+    height: auto;
+}
+
+#tableSelection {
+    color: white;
+    background-color: rgba(100, 100, 100, 0.45);
+}
+
+#tableSelection img {
+    height: 200px;
+}
+
+#tableSelection dt {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+#tableSelection dd {
+    margin: 0;
+}
+
+g.chooseSeats:hover path,
+g.chooseSeats:hover rect {
+    fill: rgba(128, 255, 0, 0.527);
+    stroke: none;
+}
+
+#tableSelection{
+    display: none;
+}
+
+/* reservation mobile */
+#reservationMobile{
+    align-items: center;
+    padding: 0.5rem;
+}
+
+/*
+#reservationMobile .reservation-form h1,
+#reservationMobile .reservation-form p{
+    color:white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    margin-bottom: 30px;
+}
+*/
+
+#reservationMobile .reservation-form form {
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+#reservationMobile .reservation-form button {
+    margin-top: 20%;
+    margin-bottom: 10%;
+    background-color:green;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#reservationMobile .reservation-form button:hover {
+    background-color: greeen;
+}
+
+/*GALLERY PAGE*/
+.gallery-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 3px; 
+    padding: 7px; 
+}
+
+.gallery-container img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    width: 110px; 
+    height: auto; 
+}
+
+
+/* MEDIA QUERIES */
+@media (min-width: 598px) {
+    .flexbox {
+        flex-shrink: auto;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        justify-content: flex-start;
+    }
+
+    .flexbox div {
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    html {
+        height: 100%;
+    }
+
+        .watercolorBackground {
+            background-image: url("../Images/Background_Watercolor.jpg");
+            background-size: cover;
+            background-position: center fixed;
+            background-attachment: fixed;
+        }
+
+    .flexbox {
+        justify-content: left;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        color: white;
+        font-size: 17.3px;
+        background-color: #000000;
+        padding: 1.12rem;
+        padding-bottom: 1rem;
+    }
+
+    nav .navTitles {
+        display: inline-block;
+    }
+
+    nav button {
+        display: none;
+    }
+    
+    nav li {
+        display: inline;
+        margin: 0 1rem;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+    }
+
+    nav a:hover,
+    nav a:focus,
+    nav a:active {
+        color: #a8a58d;
+        border-bottom: 0.3rem solid #a8a58d;
+        transition: all 0.12s ease-out;
+    }
+    header {
+        padding-top: 2.3rem;
+        position: auto;
+        color: white;
+    }
+        header img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 21.2%;
+        }
+    h1,
+    h2 {
+        font-family: Calibri, sans-serif;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+
+    #welcome {
+        display:block;
+        color: white;
+        text-align: center;
+    }
+
+    #welcome img {
+        width: 40px;
+        height: auto;
+    }
+
+    .flexbox div,
+    .flexboxOrder div {
+        flex: 0 0 250px;
+        margin: 0.5rem;
+    }
+    .flexbox img,
+    .flexboxOrder img {
+        width: 250px;
+        height: 250px;
+    }
+
+        #mainContent {
+    background-color: rgba(100, 100, 100, 0.45);
+                color: white;
+        }
+
+    .gallery-container { 
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .gallery-container img {
+        width: 225px;
+    }
+    .orderCartMobile {
+        display: none;
+    }
+    .floating-panel {
+        display: block;
+    position: fixed;
+    right: 30px;
+    top: 400px;
+    background-color: white;
+    color: black;
+    width: 350px;
+    height: auto;
+    }
+    #tableSelection{
+        display: block;
+    }
+
+    #reservationMobile{
+        display:none;
+    }
+}
+
+/* unused media queries
+@media (min-width: 992px) {
+    
+}
+
+@media (min-width: 1200px) {
+    
+}
+*/

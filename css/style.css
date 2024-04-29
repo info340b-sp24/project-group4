@@ -1,3 +1,9 @@
+/*
+1) SHOULD NOT BE USING ANY ID SELECTORS
+2) FORMATTING IS WRONG. CHECK TEXTBOOK. TOO VERTICAL, DIFFICULT TO READ.
+3) NO SIGNIFICANT CHANGE IN MEDIA QUERIES, NEEDS TO DIFFER MORE
+*/
+
 /*General page structure begins*/
 * {
     box-sizing: border-box;
@@ -394,6 +400,8 @@ g.chooseSeats:hover rect {
     h2 {
         font-size: 40px;
     }
+
+    /* SHOULD NOT BE USING ANY ID SELECTORS */
 
     #welcome {
         display:block;

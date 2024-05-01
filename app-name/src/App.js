@@ -1,19 +1,18 @@
-function App() {
+function Nav() {
   return (
     <nav>
-    <button class="hamburgerMenu">
+      <button class="hamburgerMenu">
         <span class="material-icons">menu</span>
-    </button>
-    
-    <ul>
-      <li class="navTitles"><a href="index.html">Home</a></li>
-      <li class="navTitles"><a href="order.html">Online Ordering</a></li>
-      <li class="navTitles"><a href="reservations.html">Reservations</a></li>
-      <li class="navTitles"><a href="order-popup.html">Order Pop Up</a></li>
+      </button>
 
-    </ul>
-  </nav>
-    
+      <ul>
+        <li class="navTitles"><a href="index.html">Home</a></li>
+        <li class="navTitles"><a href="order.html">Online Ordering</a></li>
+        <li class="navTitles"><a href="reservations.html">Reservations</a></li>
+        <li class="navTitles"><a href="order-popup.html">Order Pop Up</a></li>
+      </ul>
+    </nav>
+
     // <div className="App">
     //   <header className="App-header">
     //     <img src={logo} className="App-logo" alt="logo" />
@@ -33,4 +32,4 @@ function App() {
   );
 }
 
-export default App;
+export default Nav;

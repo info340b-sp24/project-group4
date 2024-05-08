@@ -16,10 +16,9 @@ export function MainSlideshow() {
             else {
                 setcurrIndex(currIndex + 1);
             }
-        }, 2700)
-
+        }, 2700);
         return () => clearInterval(intervalId);
-    }, [])
+    })
 
     return (
         <div>

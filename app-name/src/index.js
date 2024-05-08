@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Nav from './Navbar';
 import { MainSlideshow } from './MainPageSlideshow';
+import { Welcome } from './MainPageWelcome';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -10,5 +11,6 @@ root.render(
   <React.StrictMode>
     <Nav /> 
     <MainSlideshow />
+    <Welcome />
   </React.StrictMode>
 );

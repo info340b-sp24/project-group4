@@ -22,7 +22,7 @@ export function MainSlideshow() {
 
     return (
         <div>
-            <img src={imageList[currIndex]} alt={`slideshow featured menu item ${currIndex}`} />
+            <img className = 'background' src={imageList[currIndex]} alt={`slideshow featured menu item ${currIndex}`} />
         </div>
     )
 }

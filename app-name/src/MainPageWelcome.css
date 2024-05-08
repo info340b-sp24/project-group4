@@ -1,7 +1,11 @@
 .welcomeContainer {
+    padding-top: 50rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
     display: flex;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.3);
     color: white;
+    align-items: center;
 }
 
 h1 {

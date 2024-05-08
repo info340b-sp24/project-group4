@@ -1,0 +1,14 @@
+img {
+    display: none;
+    
+
+}
+
+@media (min-width: 768px) {
+    img{
+display:inline-block;
+max-width: 100rem;
+max-height: 100rem;
+    }
+    
+}

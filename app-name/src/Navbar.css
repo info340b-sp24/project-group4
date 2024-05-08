@@ -7,7 +7,7 @@ nav {
     padding: 1.12rem;
 }
 
-nav ul {
+nav ul, nav div{
     display: none;
 }
 

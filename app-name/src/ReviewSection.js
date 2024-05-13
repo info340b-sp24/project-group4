@@ -18,6 +18,9 @@ export function ReviewSection() {
         } else {
             setCurrentReview(currentReview + 1);
         }
+        if (showNotification) {
+            setShowNotification(false); 
+        }
     }
 
     var textReview = "\"" + reviewList[currentReview] + "\"";

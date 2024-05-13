@@ -1,11 +1,11 @@
-import './MainPageSlideshow.css';
+import './HomeSlideshow.css';
 import React, { useState, useEffect } from 'react';
 
 
 const images = require.context('../public/Images/Vertical', true);
 const imageList = images.keys().map(image => images(image));
 
-export function MainSlideshow() {
+export function HomeSlideshow() {
     const [currIndex, setcurrIndex] = useState(0);
 
     useEffect(() => {
@@ -21,7 +21,7 @@ export function MainSlideshow() {
     })
 
     return (
-        <div>
+        <div aria-label="a menu photos slideshow">
             <img className = 'background' src={imageList[currIndex]} alt={`slideshow featured menu item ${currIndex}`} />
         </div>
     )

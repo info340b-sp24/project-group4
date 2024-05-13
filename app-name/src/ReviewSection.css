@@ -1,0 +1,48 @@
+.reviewContainer {
+    display: flex;
+    margin-left: 1rem;
+    position:relative;
+    color: black;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+
+.material-icons {
+    color: black;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+
+
+    .reviewContainer {
+        justify-content: center;
+        color: white;
+    }
+    .material-icons {
+        color: white;
+        font-size: 40px;
+    }
+    .material-icons:hover {
+        color: #ebe3d8;
+    }
+
+    .textReviewInput {
+        display: block;
+        height:100px;
+        width:350px;
+    }
+
+    .reviewImgs {
+        max-height: 300px;
+    }
+    
+}

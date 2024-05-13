@@ -1,10 +1,10 @@
 import './Navbar.css';
 
-function Nav() {
+function NavBar() {
     return (
         <nav>
             {/* MOBILE VIEW */}
-            <button className="hamburgerMenu">
+            <button className="hamburgerMenu" aria-label="a dropdown menu">
                 <span className="material-icons">menu</span>
             </button>
             {/* DESKTOP VIEW */}
@@ -27,24 +27,7 @@ function Nav() {
             </div>
 
         </nav>
-
-        // <div className="App">
-        //   <header className="App-header">
-        //     <img src={logo} className="App-logo" alt="logo" />
-        //     <p>
-        //       Edit <code>src/App.js</code> and save to reload.
-        //     </p>
-        //     <a
-        //       className="App-link"
-        //       href="https://reactjs.org"
-        //       target="_blank"
-        //       rel="noopener noreferrer"
-        //     >
-        //       Learn React
-        //     </a>
-        //   </header>
-        // </div>
     );
 }
 
-export default Nav;
+export default NavBar;

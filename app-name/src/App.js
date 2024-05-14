@@ -1,4 +1,6 @@
 import { HomePage } from "./HomePage";
+import { ReservationsPage } from "./ReservationsPage";
+
 import NavBar from "./Navbar";
 
 export function App(props) {
@@ -8,7 +10,7 @@ export function App(props) {
             <HomePage />
             {/* see draft 2 assignment example... make the menu and reservations pages then put them below */}
             {/* <MenuOrderingPage /> */} 
-            {/* <ReservationsPage /> */}
+            <ReservationsPage />
         </div>
     )
 }

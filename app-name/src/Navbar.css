@@ -8,7 +8,27 @@ nav {
     z-index: 10;
 }
 
-nav ul, nav div{
+.sideMenu {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 100px;
+    background-color: #000000;
+    color: white;
+}
+.sideMenu a {
+    color: white;
+    font-size: 15.4px;
+    text-decoration: none;
+}
+.sideMenu li {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-right: 27px;
+}
+
+.desktop{
     display: none;
 }
 

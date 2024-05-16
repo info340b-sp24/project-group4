@@ -48,12 +48,19 @@ const menuData = {
     
 };
 
+function formatCategoryTitle(category) {
+    if (category === 'smallPlatesAndSides') {
+        return 'Small Plates & Sides';
+    }
+    return category.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+}
+
 export function Menu() {
     return (
         <div className="menu">
             {Object.keys(menuData).map(category => (
                 <div key={category} className="menu-category">
-                    <h2>{category.charAt(0).toUpperCase() + category.slice(1)}</h2>
+                    <h2>{formatCategoryTitle(category)}</h2>
                     {menuData[category] && menuData[category].map((meal, index) => (
                         <Meal key={index} {...meal} />
                     ))}

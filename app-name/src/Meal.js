@@ -9,11 +9,6 @@ export function Meal({ name, description, price, imgSrc, tags }) {
         <p>{description}</p>
         <div className="meal-info">
           <span className="meal-price">{price}</span>
-          <div className="meal-tags">
-            {tags.map((tag, index) => (
-              <span key={index} className={`tag ${tag.toLowerCase()}`}>{tag}</span>
-            ))}
-          </div>
         </div>
       </div>
     </div>

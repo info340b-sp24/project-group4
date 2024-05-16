@@ -58,6 +58,9 @@ nav img {
         font-size: 17.3px;
         padding-bottom: 2rem;
     }
+    .desktop {
+        display: inline;
+    }
 
     nav ul {
         display: inline;

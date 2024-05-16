@@ -1,8 +1,18 @@
 .reviewContainer {
     display: flex;
-    margin-left: 1rem;
+    flex-direction: column;
+    margin-left: 0.4rem;
+    margin-right: 0.5rem;
     position:relative;
     color: black;
+}
+.reviewImgs {
+    max-width: 380px;
+    max-height: 350px;
+}
+
+.textReviewInput {
+    max-width: 23rem;
 }
 
 button {
@@ -21,12 +31,16 @@ button {
 
 
 @media (min-width: 768px) {
-
+    .textReviewArea {
+        max-width: 20rem;
+    }
     .noti {
         font-style: italic;
     }
 
     .reviewContainer {
+        flex-direction: row;
+        margin-left: 0rem;
         justify-content: center;
         color: white;
     }

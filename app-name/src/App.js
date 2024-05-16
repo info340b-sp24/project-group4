@@ -8,8 +8,8 @@ export function App(props) {
         <div>
             <NavBar />
             {/* <HomePage /> */}
-            <Menu />
-            {/* <ReservationsPage /> */}
+            {/* <Menu /> */}
+            <ReservationsPage />
         </div>
     )
 }

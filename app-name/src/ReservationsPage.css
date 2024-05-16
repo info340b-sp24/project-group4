@@ -1,5 +1,89 @@
+.reservation-form {
+    margin: auto;
+    padding: 20px;
+    background-image: url('../public/Images/Background_Watercolor.jpg');
+    background-position:center center; 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    border-radius: 8px;
+}
 
+.reservation-form h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.reservation-form form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 40%; 
+    margin: auto; 
+}
+
+
+.reservation-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus {
+    border-color:rgb(0, 166, 255);
+    outline: none;
+}
+
+.reservation-form button {
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #ffdf00;
+    color: black;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.reservation-form button:hover {
+    background-color: #e3c81bb5;
+}
 
 .reservation-status {
-    color:red;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #dc3545;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.reservation-success-message {
+    padding: 200px;
+    margin-top: 20px;
+    background-color: #28a745;  
+    color: white;               
+    text-align: center;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
 }

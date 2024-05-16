@@ -2,6 +2,7 @@
     background-color: #1c1c1c;
     color: #fff;
     padding: 20px;
+    margin-top: 6rem;
 }
   
 .menu-category {
@@ -12,4 +13,11 @@
     font-size: 1.5rem;
     margin-bottom: 10px;
     color: #ffdf00;
+}
+
+
+@media (min-width: 768px) {
+    .menu {
+            margin-top: 8rem;
+    }
 }

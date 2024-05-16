@@ -1,6 +1,7 @@
 .reservation-form {
     margin: auto;
     padding: 20px;
+    margin-top: 7.5rem;
     background-image: url('../public/Images/Background_Watercolor.jpg');
     background-position:center center; 
     background-size: cover; 
@@ -86,4 +87,10 @@ input[type="date"]:focus {
     border-radius: 5px;
     font-size: 18px;
     font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .reservation-form {
+        margin-top: 6.5rem;
+    }
 }

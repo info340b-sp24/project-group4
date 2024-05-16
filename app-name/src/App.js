@@ -1,17 +1,15 @@
 import { HomePage } from "./HomePage";
 import { ReservationsPage } from "./ReservationsPage";
 import { Menu } from "./Menu";
-import { NavBar } from "./Navbar";
+import NavBar from "./Navbar";
 
 export function App(props) {
     return (
         <div>
-            {/* <NavBar /> */}
-            <HomePage />
-            {/* see draft 2 assignment example... make the menu and reservations pages then put them below */}
-            {/* <MenuOrderingPage /> */}
+            <NavBar />
+            {/* <HomePage /> */}
             <Menu />
-            <ReservationsPage />
+            {/* <ReservationsPage /> */}
         </div>
     )
 }

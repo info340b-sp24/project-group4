@@ -1,6 +1,6 @@
 import './index.css';
 
-export function ReservationsPage() {
+{/*export function ReservationsPage() {
   return (
     <div class="reservation-form">
     <h1>Make a Reservation</h1>
@@ -78,4 +78,4 @@ document.addEventListener('DOMContentLoaded', function() {
       reservationStatus.textContent = message;
       reservationStatus.style.color = 'red';
     }
-  });
+  });*/}

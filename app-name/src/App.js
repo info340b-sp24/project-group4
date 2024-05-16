@@ -7,9 +7,9 @@ export function App(props) {
     return (
         <div>
             <NavBar />
-            {/* <HomePage /> */}
+            <HomePage />
             <Menu />
-            {/* <ReservationsPage /> */}
+            <ReservationsPage />
         </div>
     )
 }

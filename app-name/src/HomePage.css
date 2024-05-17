@@ -1,0 +1,20 @@
+
+.HomePage {
+background-image: url('../public/Images/Background_Watercolor.jpg');
+background-color: rgba(255,255,255,0.6);
+background-blend-mode: lighten;
+background-position: center center;
+background-size: cover;
+background-repeat: no-repeat;
+padding-top: 4px;
+padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .HomePage {
+        background-image: none;
+        background-color: rgba(0,0,0,0);
+        padding-top: 0;
+    }
+
+}

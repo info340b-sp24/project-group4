@@ -1,25 +1,30 @@
 .reservation-form {
     margin: auto;
     padding: 20px;
-    margin-top: 7.5rem;
+    padding-bottom: 100px;
+    margin-top: 7rem;
     background-image: url('../public/Images/Background_Watercolor.jpg');
-    background-position:center center; 
-    background-size: cover; 
-    background-repeat: no-repeat; 
+    background-color: rgba(0, 0, 0, 0.75);
+    background-blend-mode: darken;  
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 8px;
+    margin-bottom: 0;
 }
+
 
 .reservation-form h1 {
     color: white;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 24px;
 }
 
 .reservation-form form {
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
-    width: 40%; 
+    width: 70%; 
     margin: auto; 
 }
 
@@ -54,7 +59,7 @@ input[type="date"]:focus {
 
 .reservation-form button {
     width: 50%;
-    margin: 0 auto;
+    margin: 40px auto;
     padding: 10px;
     background-color: #ffdf00;
     color: black;
@@ -90,7 +95,15 @@ input[type="date"]:focus {
 }
 
 @media (min-width: 768px) {
+    .reservation-form form {
+        width: 40%;  
+    }
     .reservation-form {
         margin-top: 6.5rem;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    .reservation-form h1 {
+        font-size: 50px; 
     }
 }

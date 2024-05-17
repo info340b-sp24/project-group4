@@ -3,6 +3,29 @@ import './Menu.css';
 
 const menuData = {
 
+    cupbop: [
+        { name: 'Bibimbap Cupbop', description: 'Steamed rice with lettuce, spinach, zucchini, carorts, cabbage, onion, bean sprouts, and a choice of pork, bulgogi, or tofu. Topped with an over-easy egg.', price: '$21.00', imgSrc: '/Images/Bibimbap1.png' },
+        { name: 'Ridge Cupbop', description: 'Steamed rice with lettuce, zucchini, carrots, cabbage, and a choice of chicken, pork, or tofu. Topped with an over-easy fried egg.', price: '$20.00', imgSrc: '/Images/Ridge-Cupbop.jpg' },
+        { name: 'Bulgogi Cupbop', description: 'Cupbop for meat lovers. Extra pork or chicken bulgogi cooked with carrots, onions, and green onions. Served on steamed rice with fried egg.', price: '$24.00', imgSrc: '/Images/Bulgogi-Cupbop1.png' },
+        { name: 'Bibim Ramen', description: 'Bibimbap ingredients served on chilled and seasoned ramen noodles. No broth.', price: '$20.00', imgSrc: '/Images/Bibim-Ramen1.png' },
+        { name: 'Kimchi Fried Rice', description: 'Steamed rice pan-fried with kimchi, onions, and bacon, topped with a fried egg.', price: '$23.00', imgSrc: '/Images/KFR.jpg' },
+        { name: 'Curry Chicken Cupbop', description: 'Curry sauce on steamed rice with vegetables, bulgogi chicken, and fried egg.', price: '$20.00', imgSrc: '/Images/Curry-Cupbop.jpg' },
+    ],
+
+    ramen: [
+        { name: 'Shoyu', description: 'Mildly sweet soy sauce base.', price: '$21.00', imgSrc: '/Images/Ramen-Shoyu3.jpg' },
+        { name: 'Tonkatsu', description: 'Rich, creamy pork broth.', price: '$21.00', imgSrc: 'Images/Tonkatsu-Ramen1.png' },
+        { name: 'Miso', description: 'Soybean paste & garlic.', price: '$21.00', imgSrc: '/Images/Ramen-Miso2.jpg' },
+        { name: 'Spicy', description: 'Roasted sesame and chili oil.', price: '$21.00', imgSrc: '/Images/Ramen-Spicy.jpg' },
+        { name: 'Wonton Ramen', description: 'Shoyu broth with ramen noodles and dumplings - additional charge to add meat.', price: '$23.00', imgSrc: '/Images/Wonton-Ramen1.png' },
+        { name: 'Shio', description: 'Bonito and sea salt.', price: '$21.00', imgSrc: '/Images/Ramen-Shio.png' },
+        { name: 'Curry Udon With Chicken', description: 'Curry broth with chicken, veggies, and a croquette.', price: '$20.00', imgSrc: '/Images/Ramen-Curry.jpg' },
+        { name: 'Korean Spicy Ramen', description: 'Red-pepper broth with fried noodles.', price: '$19.00', imgSrc: '/Images/Ramen-Korean-Spicy.jpg' },
+        { name: 'Spicy Curry Ramen', description: 'Red-pepper broth and curry broth.', price: '$20.00', imgSrc: '/Images/Spicy-Curry-Ramen.jpg' },
+        { name: 'Korean Army Ramen', description: 'Spicy kimchi ramen.', price: '$20.00', imgSrc: '/Images/Army-Ramen.jpg' },
+        { name: 'Kid\'s', description: 'Half order of ramen with veggies and meat. No egg.', price: '$12.00', imgSrc: '/Images/Kids-Ramen.png' },
+    ],
+
     houseSpecials: [
         { name: 'Korean BBQ Chicken Wings', description: 'Six large, meaty, fried wings seasoned with choice of sweet soy garlic soy or spicy Korean barbeque.', price: '$19.00', imgSrc: '/Images/Wings.jpg' },
         { name: 'Seafood Pancake', description: 'Large skillet-cooked pancake with squid, shrimp, octopus, mussels, carrots, onions, and zucchini.', price: '$21.00', imgSrc: '/Images/Seafood-Pancake3.jpg' },
@@ -24,29 +47,6 @@ const menuData = {
         { name: 'House Salad', description: 'Lettuce, bell peppers, cucumbers, onions, tomatoes, carrots and egg, with Asian sesame, honey mustard or thousand island dressing.', price: '$15.00', imgSrc: '/Images/Salad.jpg' },
         { name: 'Seaweed Salad', description: 'Classic seaweed salad.', price: '$10.00', imgSrc: '/Images/Seaweed-Salad.jpg' },
     ],
-
-    ramen: [
-        { name: 'Shoyu', description: 'Mildly sweet soy sauce base.', price: '$21.00', imgSrc: '/Images/Ramen-Shoyu3.jpg' },
-        { name: 'Tonkatsu', description: 'Rich, creamy pork broth.', price: '$21.00', imgSrc: 'Images/Tonkatsu-Ramen1.png' },
-        { name: 'Miso', description: 'Soybean paste & garlic.', price: '$21.00', imgSrc: '/Images/Ramen-Miso2.jpg' },
-        { name: 'Spicy', description: 'Roasted sesame and chili oil.', price: '$21.00', imgSrc: '/Images/Ramen-Spicy.jpg' },
-        { name: 'Wonton Ramen', description: 'Shoyu broth with ramen noodles and dumplings - additional charge to add meat.', price: '$23.00', imgSrc: '/Images/Wonton-Ramen1.png' },
-        { name: 'Shio', description: 'Bonito and sea salt.', price: '$21.00', imgSrc: '/Images/Ramen-Shio.png' },
-        { name: 'Curry Udon With Chicken', description: 'Curry broth with chicken, veggies, and a croquette.', price: '$20.00', imgSrc: '/Images/Ramen-Curry.jpg' },
-        { name: 'Korean Spicy Ramen', description: 'Red-pepper broth with fried noodles.', price: '$19.00', imgSrc: '/Images/Ramen-Korean-Spicy.jpg' },
-        { name: 'Spicy Curry Ramen', description: 'Red-pepper broth and curry broth.', price: '$20.00', imgSrc: '/Images/Spicy-Curry-Ramen.jpg' },
-        { name: 'Korean Army Ramen', description: 'Spicy kimchi ramen.', price: '$20.00', imgSrc: '/Images/Army-Ramen.jpg' },
-        { name: 'Kid\'s', description: 'Half order of ramen with veggies and meat. No egg.', price: '$12.00', imgSrc: '/Images/Kids-Ramen.png' },
-    ],
-
-    cupbop: [
-        { name: 'Bibimbap Cupbop', description: 'Steamed rice with lettuce, spinach, zucchini, carorts, cabbage, onion, bean sprouts, and a choice of pork, bulgogi, or tofu. Topped with an over-easy egg.', price: '$21.00', imgSrc: '/Images/Bibimbap1.png' },
-        { name: 'Ridge Cupbop', description: 'Steamed rice with lettuce, zucchini, carrots, cabbage, and a choice of chicken, pork, or tofu. Topped with an over-easy fried egg.', price: '$20.00', imgSrc: '/Images/Ridge-Cupbop.jpg' },
-        { name: 'Bulgogi Cupbop', description: 'Cupbop for meat lovers. Extra pork or chicken bulgogi cooked with carrots, onions, and green onions. Served on steamed rice with fried egg.', price: '$24.00', imgSrc: '/Images/Bulgogi-Cupbop1.png' },
-        { name: 'Bibim Ramen', description: 'Bibimbap ingredients served on chilled and seasoned ramen noodles. No broth.', price: '$20.00', imgSrc: '/Images/Bibim-Ramen1.png' },
-        { name: 'Kimchi Fried Rice', description: 'Steamed rice pan-fried with kimchi, onions, and bacon, toppe with a fried egg.', price: '$23.00', imgSrc: '/Images/KFR.jpg' },
-        { name: 'Curry Chicken Cupbop', description: 'Curry sauce on steamed rice with vegetables, bulgogi chicken, and fried egg.', price: '$20.00', imgSrc: '/Images/Curry-Cupbop.jpg' },
-    ]
     
 };
 
@@ -63,12 +63,13 @@ export function Menu() {
             {Object.keys(menuData).map(category => (
                 <div key={category} className="menu-category">
                     <h2>{formatCategoryTitle(category)}</h2>
-                    {menuData[category] && menuData[category].map((meal, index) => (
-                        <Meal key={index} {...meal} />
-                    ))}
+                    <div className="meals">
+                        {menuData[category].map((meal, index) => (
+                            <Meal key={index} {...meal} />
+                        ))}
+                    </div>
                 </div>
             ))}
         </div>
     );
 }
-

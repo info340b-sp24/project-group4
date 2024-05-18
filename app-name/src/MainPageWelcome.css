@@ -27,12 +27,13 @@
     }
 
     h1 {
-        font-family: Calibri, sans-serif;
+        font-family: "Lora", Calibri, sans-serif;
         font-weight: 600;
         font-size: 60px;
     }
 
     p {
+        font-family: "Nunito", Arial, Calibri, sans-serif;
         font-size: 18px;
         padding-left: 40px;
         

@@ -1,5 +1,4 @@
 import { Meal } from './Meal';
-import './Menu.css';
 
 const menuData = {
 

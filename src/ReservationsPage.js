@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './ReservationsPage.css';
 
 export function ReservationsPage() {
   const [reservationStatus, setReservationStatus] = useState('');

@@ -1,6 +1,4 @@
-import './ReviewSection.css';
 import React, { useState } from 'react';
-
 
 const images = require.context('../public/Images/ReviewPhotos', true);
 var imageList = images.keys().map(image => images(image));

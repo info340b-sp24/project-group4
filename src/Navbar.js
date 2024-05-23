@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Navbar.css';
 
 function NavBar() {
     const [sideMenuVisible, setSideMenuVisiblility] = useState(false);

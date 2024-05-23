@@ -1,0 +1,41 @@
+.welcomeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 7rem;
+    margin-left: 1rem;
+    color: black;
+}
+
+
+@media (min-width: 768px) {
+    .welcomeContainer {
+        flex-wrap:nowrap;
+        margin-top: 6.5rem;
+        margin-left: 15rem;
+        margin-right: 15rem;
+        padding: 5rem;
+        color: white;
+        align-items: center;
+        position: relative;
+    }
+
+    .welcomeContainerInner {
+        background-color: rgba(255, 255, 255, 0.3);
+        margin-top: 4rem;
+        margin-left: 8rem;
+        padding: 3rem;
+    }
+
+    h1 {
+        font-family: "Lora", Calibri, sans-serif;
+        font-weight: 600;
+        font-size: 60px;
+    }
+
+    p {
+        font-family: "Nunito", Arial, Calibri, sans-serif;
+        font-size: 18px;
+        padding-left: 40px;
+        
+    }
+}

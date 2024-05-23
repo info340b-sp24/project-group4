@@ -1,0 +1,43 @@
+.menu {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 20px;
+    margin-top: 2rem;
+}
+
+.menu-category {
+    margin-bottom: 40px;
+}
+
+.menu-category h2 {
+    font-family: "Lora", Calibri, sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #524B4B;
+}
+
+.meals {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px; 
+}
+
+.meal {
+    flex: 0 1 calc(50% - 20px); 
+    max-width: calc(50% - 20px); 
+    box-sizing: border-box; 
+}
+
+@media (max-width: 768px) {
+    .meal {
+        flex: 0 1 100%; 
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .menu {
+        margin-top: 4rem;
+    }
+}

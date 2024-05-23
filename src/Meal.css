@@ -1,0 +1,50 @@
+.meal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: calc(50% - 20px); 
+    box-sizing: border-box; 
+}
+
+.meal-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.meal-details {
+    flex: 1;
+}
+
+.meal-details h3 {
+    font-family: "Lora", Calibri, sans-serif;
+    font-size: 1.2rem;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.meal-info,
+.meal-price,
+.meal-details p {
+    font-family: "Nunito", Arial, Calibri, sans-serif;
+    font-size: 1rem;
+    color: #666;
+    margin: 0 0 10px;
+}
+
+.meal-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.meal-price {
+    color: #333;
+}

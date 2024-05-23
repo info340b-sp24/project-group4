@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom'
 
 function NavBar() {
     const [sideMenuVisible, setSideMenuVisiblility] = useState(false);
@@ -16,10 +17,9 @@ function NavBar() {
             </button>
             <div className="sideMenu">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="order.html">Online Ordering</a></li>
-                    <li><a href="reservations.html">Reservations</a></li>
-                    <li><a href="order-popup.html">Order Pop Up</a></li>
+                    <li><NavLink to="home">Home</NavLink></li>
+                    <li><NavLink to ="menu">Menu</NavLink></li>
+                    <li><NavLink to="reservations">Reservations</NavLink></li>
                 </ul>
             </div>
 
@@ -29,11 +29,9 @@ function NavBar() {
                 alt="Logo of Ridge Cupbob & Ramen"
             />
             <ul className="desktop">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="order.html">Online Ordering</a></li>
-                <li><a href="reservations.html">Reservations</a></li>
-                <li><a href="order-popup.html">Order Pop Up</a></li>
-                
+                <li><NavLink to="home">Home</NavLink></li>
+                <li><NavLink to="menu">Menu</NavLink></li>
+                <li><NavLink to="reservations">Reservations</NavLink></li>
             </ul>
             <div className="desktop">
                 <a href="https://www.instagram.com/explore/locations/357552958432015/ridge-cupbop-ramen/" target="_blank"
@@ -41,7 +39,6 @@ function NavBar() {
                 <a href="https://www.facebook.com/poemwjwJEDA/" target="_blank"
                 ><img src="Images/facebook1.jpg" alt="facebook logo" /></a>
             </div>
-
         </nav>
     );
 }

@@ -101,8 +101,10 @@ nav img {
 }
 
 .reviewImgs {
-  max-width: 380px;
-  max-height: 350px;
+  max-width: 270px;
+  max-height: 270px;
+  margin: auto;
+  border: 5px solid rgba(250, 255, 240, 0.7);
 }
 
 .textReviewInput {
@@ -141,6 +143,8 @@ nav img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  flex-grow: 0;
+  justify-content: left;
   gap: 10px;
 }
 
@@ -158,7 +162,6 @@ nav img {
   margin: 10px;
   padding: 20px;
   width: calc(50% - 20px);
-  box-sizing: border-box;
 }
 
 .meal-image {
@@ -309,7 +312,7 @@ input[type="date"]:focus {
     display: inline;
     position: relative;
     bottom: 38px;
-    padding-left: 10rem;
+    padding-left: 17rem;
     margin: 0;
   }
 
@@ -367,7 +370,7 @@ input[type="date"]:focus {
 
   .welcomeContainer {
     flex-wrap: nowrap;
-    margin-top: 6.5rem;
+    margin-top: 4rem;
     margin-left: 15rem;
     margin-right: 15rem;
     padding: 5rem;
@@ -398,6 +401,9 @@ input[type="date"]:focus {
 
   .textReviewArea {
     max-width: 20rem;
+    font-family: "Nunito", Arial, Calibri, sans-serif;
+    font-size: 15px;
+    padding-left: 10px;
   }
 
   .reviewContainer .noti {
@@ -427,7 +433,10 @@ input[type="date"]:focus {
   }
 
   .reviewImgs {
-    max-height: 300px;
+    max-height: 277px;
+    border: 7px solid white;
+    margin: 0;
+    margin-top: 17px;
   }
 
   .meal {
@@ -436,7 +445,7 @@ input[type="date"]:focus {
   }
 
   .menu {
-    margin-top: 4rem;
+    margin-top: 7rem;
   }
 
   .reservation-form form {

@@ -482,7 +482,7 @@ input[type="date"]:focus {
   }
 
   .welcomeContainerInner {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.17);
     margin-top: 4rem;
     margin-left: 8rem;
     padding: 3rem;

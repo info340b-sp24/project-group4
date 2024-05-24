@@ -10,7 +10,7 @@ export function FoodCard(props) {
         <h3>{props.name}</h3>
         <div className="card-info">
           <span className="card-calories">{props.calories} Calories</span>
-          <Link to={`/foodDetails/${props.name}`} className="btn btn-primary">Details</Link>
+          <Link to={`/foodDetails/${encodeURIComponent(props.name)}`} className="btn btn-primary">Details</Link>
         </div>
       </div>
     </div>

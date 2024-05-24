@@ -262,9 +262,26 @@ nav img {
   justify-content: space-between;
   align-items: center;
 }
+
 .cardPageDetail {
-  margin-top: 20rem;
+  font-size: 50px;
+  display: block;
+  z-index: 20;
+  background: white;
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 500px;
+  font-size: 50px;
 }
+
 .reservation-form {
   margin: auto;
   padding: 20px;

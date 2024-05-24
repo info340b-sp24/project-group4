@@ -4,16 +4,23 @@ import _ from 'lodash';
 
 import FOOD_DETAILS from '../data/fooddetails.json'; 
 
-export function FoodCardPage(props) {
-    const urlParams = useParams();
+export function FoodCardPage() {
+    const { foodName } = useParams();
 
-    const foodNameString = urlParams.foodName;
+    console.log(foodName);
+    const foodNameString = decodeURIComponent(foodName);
+
+    console.log(foodNameString);
 
     let food = _.find(FOOD_DETAILS, { name: foodNameString });
 
+    if (!food) {
+        return <div>Food not found</div>;
+    }
+
     return (
         <div className='cardPageDetail'>
-            <h1>Adopt {food.name}</h1>
+            <h1>Details for {food.name}</h1>
             <p className="lead">{food.name} {food.calories}</p>
             <div>
                 {food.name}

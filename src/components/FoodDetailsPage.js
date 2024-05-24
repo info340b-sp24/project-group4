@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { FoodCard } from './FoodCard';
 import _ from 'lodash';
+import { Outlet } from 'react-router-dom';
 
 export function FoodDetails(props) {
     const [caloriesAscending, setCaloriesAscending] = useState(true);
@@ -85,6 +86,7 @@ export function FoodDetails(props) {
                 <div className="foodDetails">
                     {foods}
                 </div>
+                <div><Outlet/></div>
             </div>
         );
     }

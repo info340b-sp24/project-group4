@@ -20,9 +20,7 @@ export function App() {
                 </Route>
                 <Route path="foodDetails" element={<FoodDetails data={FOOD_DETAILS} />}>
                     <Route path=":foodName" element={<FoodCardPage />} />
-                    <Route index element={<FoodDetails data={FOOD_DETAILS} />} />
                 </Route>
-
                 <Route path="*" element={<Navigate to="/home" />} />
             </Routes>
         </div>

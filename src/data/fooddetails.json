@@ -10,7 +10,7 @@
     },
     {
         "name": "Ridge Cupbop",
-        "veganoption": true,
+        "veganoption": false,
         "gfoption": true,
         "spicy": false,
         "seafood": false,
@@ -192,7 +192,7 @@
         "name": "Edamame",
         "veganoption": true,
         "gfoption": false,
-        "spicy": true,
+        "spicy": false,
         "seafood": false,
         "calories": 130,
         "img": "/Images/Edamame1.png"

@@ -1,0 +1,64 @@
+/* .menu {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 20px;
+    margin-top: 2rem;
+} */
+
+.foodDetails {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 0;
+    justify-content: left;
+    gap: 10px;
+}
+
+.foodCard{
+    flex: 0 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: calc(50% - 20px);
+}
+
+.card-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.card-details {
+    flex: 1;
+}
+
+.card-details h3 {
+    font-family: "Lora", Calibri, sans-serif;
+    font-size: 1.2rem;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.card-info,
+.card-price,
+.card-details p {
+    font-family: "Nunito", Arial, Calibri, sans-serif;
+    font-size: 1rem;
+    color: #666;
+    margin: 0 0 10px;
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

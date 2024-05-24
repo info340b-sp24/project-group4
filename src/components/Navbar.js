@@ -20,6 +20,7 @@ function NavBar() {
                     <li><NavLink to="home">Home</NavLink></li>
                     <li><NavLink to ="menu">Menu</NavLink></li>
                     <li><NavLink to="reservations">Reservations</NavLink></li>
+                    <li><NavLink to="foodDetails">Food Details</NavLink></li>
                 </ul>
             </div>
 
@@ -32,12 +33,14 @@ function NavBar() {
                 <li><NavLink to="home">Home</NavLink></li>
                 <li><NavLink to="menu">Menu</NavLink></li>
                 <li><NavLink to="reservations">Reservations</NavLink></li>
+                <li><NavLink to="foodDetails">Food Details</NavLink></li>
             </ul>
             <div className="desktop">
                 <a href="https://www.instagram.com/explore/locations/357552958432015/ridge-cupbop-ramen/" target="_blank"
                 ><img src="Images/blackinsta.png" alt="instagram logo" /></a>
                 <a href="https://www.facebook.com/poemwjwJEDA/" target="_blank"
                 ><img src="Images/facebook1.jpg" alt="facebook logo" /></a>
+
             </div>
         </nav>
     );

@@ -62,31 +62,30 @@ export function FoodDetails(props) {
     ));
 
 
-    
+    return (
+        <div className="foodDetailsPage">
+            <h1>Check food details here!</h1>
+            <div class="filters">
+                <p>Sort by calories: </p>
+                <input type="checkbox" id="caloriesSort" onClick={sortCalories} />Calories Descending (Default ascending)
 
+                <p>Include:</p>
 
-        return (
-            <div className="foodDetailsPage">
-                <div>
-                    <input type="checkbox" id="caloriesSort" onClick={sortCalories} />Calories Descending
+                <input type="checkbox" id="seafood" name="seafood" onClick={filters} />Seafood
 
-                    Include:
+                <input type="checkbox" id="veganoption" name="veganoption" onClick={filters} />Vegan Options
 
-                    <input type="checkbox" id="seafood" name="seafood" onClick={filters} />Seafood
+                <input type="checkbox" id="gfoption" name="gfoption" onClick={filters} />Gluten Free Options
 
-                    <input type="checkbox" id="veganoption" name="veganoption" onClick={filters} />Vegan Options
+                <input type="checkbox" id="spicy" name="spicy" onClick={filters} />Spicy
 
-                    <input type="checkbox" id="gfoption" name="gfoption" onClick={filters} />Gluten Free Options
+                <input type="checkbox" id="clear" onClick={clearCriterias} />*Clear Criterias*
 
-                    <input type="checkbox" id="spicy" name="spicy" onClick={filters} />Spicy
-
-                    <input type="checkbox" id="clear" onClick={clearCriterias} />Clear Criterias
-
-                </div>
-                <div className="foodDetails">
-                    {foods}
-                </div>
-                <div><Outlet/></div>
             </div>
-        );
-    }
+            <div className="foodDetails">
+                {foods}
+            </div>
+            <div><Outlet /></div>
+        </div>
+    );
+}

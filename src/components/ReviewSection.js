@@ -36,11 +36,11 @@ export function ReviewSection() {
         <div className='reviewContainer'>
             <img src={pictureReview} className='reviewImgs'></img>
             <p className="textReviewArea">{textReview}</p>
-            <button aria-label="next arrow button" onClick={handleClick}><span class="material-icons">arrow_forward_ios</span></button>
+            <button aria-label="next arrow button" onClick={handleClick}><span className="material-icons">arrow_forward_ios</span></button>
 
             <form onSubmit={handleSubmit} aria-label="submit a review form">
                 <label>
-                    <input className="textReviewInput" type="text" minlength="3" maxlength="300" placeholder="Submit a review with us! (min char 3; max char 300)" name="textRev" required/>
+                    <input className="textReviewInput" type="text" minLength="3" maxLength="300" placeholder="Submit a review with us! (min char 3; max char 300)" name="textRev" required/>
                 </label>
                 <label>
                     <input type="file" name="file" required/>

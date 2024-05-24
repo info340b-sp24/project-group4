@@ -207,6 +207,9 @@ nav img {
   padding: 20px;
   padding-top: 8rem;
 }
+.foodDetailsPage input {
+  margin-left: 10px;
+}
 
 .foodDetails {
   display: flex;

@@ -77,7 +77,7 @@
         "gfoption": false,
         "spicy": true,
         "seafood": true,
-        "calories": 120,
+        "calories": 130,
         "img": "/Images/Ramen-Shio.png"
     },
     {
@@ -104,7 +104,7 @@
         "gfoption": false,
         "spicy": false,
         "seafood": false,
-        "calories": 80,
+        "calories": 180,
         "img": "/Images/Ramen-Shoyu3.jpg"
     },
     {
@@ -185,7 +185,7 @@
         "gfoption": false,
         "spicy": false,
         "seafood": true,
-        "calories": 200,
+        "calories": 100,
         "img": "/Images/Seaweed-Salad.jpg"
     },
     {
@@ -194,7 +194,7 @@
         "gfoption": false,
         "spicy": false,
         "seafood": false,
-        "calories": 130,
+        "calories": 80,
         "img": "/Images/Edamame1.png"
     },
     {
@@ -203,7 +203,7 @@
         "gfoption": false,
         "spicy": false,
         "seafood": false,
-        "calories": 210,
+        "calories": 160,
         "img": "/Images/Chinese-Egg-Roll1.png"
     },
     {

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { FoodCard } from './FoodCard';
 import _ from 'lodash';
@@ -8,12 +7,12 @@ export function FoodDetails(props) {
     const [caloriesAscending, setCaloriesAscending] = useState(true);
     const [sortCriterias, setSortCriterias] = useState([]);
 
-
-    var sortedByCalories = _.sortBy(props.data, 'calories');
+    let sortedByCalories = _.sortBy(props.data, 'calories');
 
     function sortCalories() {
         setCaloriesAscending(!caloriesAscending);
     }
+
     function filters(event) {
         setSortCriterias(
             [
@@ -21,6 +20,7 @@ export function FoodDetails(props) {
             ]
         );
     }
+
     function clearCriterias() {
         setSortCriterias([]);
         window.location.reload();
@@ -35,8 +35,6 @@ export function FoodDetails(props) {
     if (sortCriterias.length > 0) {
 
         filteredData = filteredData.filter((foodItem) => {
-            console.log('Checking food item:', foodItem);
-
             return sortCriterias.every((filter) => {
                 switch (filter) {
                     case 'veganoption':
@@ -54,7 +52,6 @@ export function FoodDetails(props) {
         });
     }
 
-
     var foods = filteredData.map((food) => (
         <div key={food.name}>
             <FoodCard foodItem={food} name={food.name} vegan_option={food.veganoption} gf_option={food.gfoption} spicy={food.spicy} seafood={food.seafood} calories={food.calories} img={food.img} />
@@ -70,15 +67,10 @@ export function FoodDetails(props) {
                 <input type="checkbox" id="caloriesSort" onClick={sortCalories} />Calories Descending (Default ascending)
 
                 <p>Include:</p>
-
                 <input type="checkbox" id="seafood" name="seafood" onClick={filters} />Seafood
-
                 <input type="checkbox" id="veganoption" name="veganoption" onClick={filters} />Vegan Options
-
                 <input type="checkbox" id="gfoption" name="gfoption" onClick={filters} />Gluten Free Options
-
                 <input type="checkbox" id="spicy" name="spicy" onClick={filters} />Spicy
-
                 <input type="checkbox" id="clear" onClick={clearCriterias} />*Clear Criterias*
 
             </div>

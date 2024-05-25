@@ -44,7 +44,7 @@ nav .sideMenu li {
   padding-right: 27px;
 }
 
-nav .desktop {
+nav .navdesktop {
   display: none;
 }
 
@@ -406,7 +406,7 @@ input[type="date"]:focus {
     padding-bottom: 2rem;
   }
 
-  nav .desktop {
+  nav .navdesktop {
     display: inline;
   }
 
@@ -450,6 +450,9 @@ input[type="date"]:focus {
     color: #a8a58d;
     border-bottom: 0.3rem solid #a8a58d;
     transition: all 0.12s ease-out;
+  }
+  nav .hamburgerMenu {
+    display: none;
   }
 
   .HomePage {

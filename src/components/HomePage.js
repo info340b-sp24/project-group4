@@ -1,7 +1,6 @@
 import { ReviewSection } from './ReviewSection';
 import React, { useState, useEffect } from 'react';
 
-
 const images = require.context('../../public/Images/Vertical', true);
 const imageList = images.keys().map(image => images(image));
 

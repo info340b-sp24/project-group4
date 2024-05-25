@@ -1,18 +1,11 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import _ from 'lodash';
-import { Link } from 'react-router-dom'
-
-
 import FOOD_DETAILS from '../data/fooddetails.json'; 
+import { Link, useParams } from 'react-router-dom'
 
 export function FoodCardPage() {
     const { foodName } = useParams();
-
-    console.log(foodName);
     const foodNameString = decodeURIComponent(foodName);
-
-    console.log(foodNameString);
 
     let food = _.find(FOOD_DETAILS, { name: foodNameString });
 
@@ -26,7 +19,7 @@ export function FoodCardPage() {
 
             <h1>Food Details for {food.name} ({food.calories} Calories)</h1>
 
-            <div className='foodDetailsContainer'>
+            <div className='foodDetailsContainer' aria-label="white popup box showing food details">
                 <img src={food.img} alt='{food.name}' />
                 <div>
                 <p>Has gluten free options? {food.gfoption ? 'Yes' : 'No'}.</p>

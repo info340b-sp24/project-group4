@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { NavLink } from 'react-router-dom'
 
 function NavBar() {
     const [sideMenuVisible, setSideMenuVisiblility] = useState(false);
 
+    const sideMenu = useRef(null);
+
     function hamburgerClick(event) {
         setSideMenuVisiblility(!sideMenuVisible);
-        const sideMenu = document.querySelector('.sideMenu');
-        sideMenu.style.display = sideMenuVisible ? 'inline-block' : 'none';
+        sideMenu.current.style.display = sideMenuVisible ? 'inline-block' : 'none';
     }
 
     return (
@@ -15,7 +16,7 @@ function NavBar() {
             <button className="hamburgerMenu" onClick={hamburgerClick} aria-label="a dropdown menu">
                 <span className="material-icons">menu</span>
             </button>
-            <div className="sideMenu">
+            <div className="sideMenu" ref={sideMenu}>
                 <ul>
                     <li><NavLink to="home">Home</NavLink></li>
                     <li><NavLink to ="menu">Menu</NavLink></li>

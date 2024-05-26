@@ -20,7 +20,7 @@ export function HomePage() {
     })
 
     return (
-        <div class="HomePage">
+        <div className="HomePage">
             <div aria-label="a menu photos slideshow">
                 <img className='homeSlideshowBackground' src={imageList[currIndex]} alt={`slideshow featured menu item ${currIndex}`} />
             </div>

@@ -19,7 +19,7 @@ export function FoodCardPage() {
 
             <h1>Food Details for {food.name} ({food.calories} Calories)</h1>
 
-            <div className='foodDetailsContainer' aria-label="white popup box showing food details">
+            <div className='foodDetailsContainer'>
                 <img src={food.img} alt='{food.name}' />
                 <div>
                 <p>Has gluten free options? {food.gfoption ? 'Yes' : 'No'}.</p>

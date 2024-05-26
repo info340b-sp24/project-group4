@@ -1,0 +1,605 @@
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+  padding: 1.12rem;
+  z-index: 10;
+}
+
+nav .sideMenu {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 100px;
+  background-color: #000000;
+  color: white;
+}
+
+nav .sideMenu a {
+  color: white;
+  font-size: 15.4px;
+  text-decoration: none;
+}
+
+nav .sideMenu li {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  padding-right: 27px;
+}
+
+nav .navdesktop {
+  display: none;
+}
+
+nav .hamburgerMenu {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  position: relative;
+  bottom: 10px;
+}
+
+nav .material-icons {
+  color: white;
+  font-size: 35px;
+  position: relative;
+  bottom: 3px;
+  padding: 0;
+}
+
+nav img {
+  width: 75px;
+  padding-left: 15rem;
+}
+
+.HomePage {
+  background-image: url('../public/Images/Background_Watercolor.jpg');
+  background-color: rgba(255, 255, 255, 0.6);
+  background-blend-mode: lighten;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 4px;
+  padding-bottom: 20px;
+}
+
+.homeSlideshowBackground {
+  display: none;
+}
+
+.welcomeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 7rem;
+  margin-left: 1rem;
+  color: black;
+}
+
+.reviewContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.4rem;
+  margin-right: 0.5rem;
+  position: relative;
+  color: black;
+}
+
+.reviewImgs {
+  max-width: 270px;
+  max-height: 270px;
+  margin: auto;
+  border: 5px solid rgba(250, 255, 240, 0.7);
+}
+
+.textReviewInput {
+  max-width: 23rem;
+}
+
+.reviewContainer button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.reviewContainer .material-icons {
+  color: black;
+}
+
+.menu {
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 20px;
+  margin-top: 2rem;
+}
+
+.menu-category {
+  margin-bottom: 40px;
+}
+
+.menu-category h2 {
+  font-family: "Lora", Calibri, sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #524B4B;
+}
+
+.meals {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 0;
+  justify-content: left;
+  gap: 10px;
+}
+
+.meal {
+  flex: 0 1 calc(50% - 20px);
+  max-width: calc(50% - 20px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: calc(50% - 20px);
+}
+
+.meal-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.meal-details {
+  flex: 1;
+}
+
+.meal-details h3 {
+  font-family: "Lora", Calibri, sans-serif;
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.meal-info,
+.meal-price,
+.meal-details p {
+  font-family: "Nunito", Arial, Calibri, sans-serif;
+  font-size: 1rem;
+  color: #666;
+  margin: 0 0 10px;
+}
+
+.meal-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meal-price {
+  color: #333;
+}
+
+.foodDetailsPage {
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 20px;
+  padding-top: 8rem;
+}
+.foodDetailsPage input {
+  margin-left: 10px;
+}
+
+.foodDetails {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 0;
+  justify-content: center;
+}
+
+.foodCard {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 370px;
+}
+
+.card-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.card-details {
+  flex: 1;
+}
+
+.card-details h3 {
+  font-family: "Lora", Calibri, sans-serif;
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.card-info,
+.card-price,
+.card-details p {
+  font-family: "Nunito", Arial, Calibri, sans-serif;
+  font-size: 1rem;
+  color: #666;
+  margin: 0 0 10px;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardPageDetail {
+  font-size: 16px;
+  display: block;
+  z-index: 20;
+  background: white;
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 770px;
+}
+
+.foodDetailsPage .filters {
+  margin-left: 3px;
+}
+
+.cardPageDetail img {
+  max-width: 200px;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.cardPageDetail .material-icons {
+  color: black;
+}
+
+.foodDetailsContainer {
+  display: flex;
+  align-items: top;
+}
+
+.reservation-form {
+  margin: auto;
+  padding: 20px;
+  padding-bottom: 100px;
+  margin-top: 7rem;
+  background-image: url('../public/Images/Background_Watercolor.jpg');
+  background-color: rgba(0, 0, 0, 0.75);
+  background-blend-mode: darken;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  margin-bottom: 0;
+}
+
+
+.reservation-form h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.reservation-form form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  width: 70%;
+  margin: auto;
+}
+
+
+.reservation-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.reservation-form input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+.reservation-form input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus {
+  border-color: rgb(0, 166, 255);
+  outline: none;
+}
+
+.reservation-form button {
+  width: 50%;
+  margin: 40px auto;
+  padding: 10px;
+  background-color: #ffdf00;
+  color: black;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+
+.reservation-form button:hover {
+  background-color: #e3c81bb5;
+}
+
+.reservation-status {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #dc3545;
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.reservation-success-message {
+  padding: 200px;
+  margin-top: 20px;
+  background-color: #28a745;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  nav {
+    color: white;
+    font-size: 17.3px;
+    padding-bottom: 2rem;
+  }
+
+  nav .navdesktop {
+    display: inline;
+  }
+
+  nav ul {
+    display: inline;
+    position: relative;
+    bottom: 38px;
+    padding-left: 14rem;
+    margin: 0;
+  }
+
+  nav div img {
+    width: 29px;
+    padding: 0;
+    margin-left: 30px;
+  }
+
+  nav div {
+    padding: 0;
+    margin: 0;
+    display: inline;
+    position: absolute;
+    top: 2.2rem;
+    right: 6.4rem;
+  }
+
+  nav li {
+    display: inline-block;
+    display: inline;
+    margin: 0 2rem;
+  }
+
+  nav ul a {
+    color: white;
+    text-decoration: none;
+  }
+
+  nav ul a:hover,
+  nav ul a:focus,
+  nav ul a:active {
+    color: #a8a58d;
+    border-bottom: 0.3rem solid #a8a58d;
+    transition: all 0.12s ease-out;
+  }
+  nav .hamburgerMenu {
+    display: none;
+  }
+
+  .HomePage {
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0);
+    padding-top: 0;
+  }
+
+  .homeSlideshowBackground {
+    display: inline-block;
+    position: absolute;
+    padding-top: 0rem;
+    margin-top: 0;
+    z-index: -5;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+  }
+
+  .welcomeContainer {
+    flex-wrap: nowrap;
+    margin-top: 4rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    padding: 5rem;
+    color: white;
+    align-items: center;
+    position: relative;
+  }
+
+  .welcomeContainerInner {
+    background-color: rgba(255, 255, 255, 0.17);
+    margin-top: 4rem;
+    margin-left: 8rem;
+    padding: 3rem;
+  }
+
+  .welcomeContainer h1 {
+    font-family: "Lora", Calibri, sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+  }
+
+  .welcomeContainer p {
+    font-family: "Nunito", Arial, Calibri, sans-serif;
+    font-size: 18px;
+    padding-left: 40px;
+
+  }
+
+  .textReviewArea {
+    max-width: 20rem;
+    font-family: "Nunito", Arial, Calibri, sans-serif;
+    font-size: 15px;
+    padding-left: 10px;
+  }
+
+  .reviewContainer .noti {
+    font-style: italic;
+  }
+
+  .reviewContainer {
+    flex-direction: row;
+    margin-left: 0rem;
+    justify-content: center;
+    color: white;
+  }
+
+  .reviewContainer .material-icons {
+    color: white;
+    font-size: 40px;
+  }
+
+  .reviewContainer .material-icons:hover {
+    color: #ebe3d8;
+  }
+
+  .textReviewInput {
+    display: block;
+    height: 100px;
+    width: 350px;
+  }
+
+  .reviewImgs {
+    max-height: 277px;
+    border: 7px solid white;
+    margin: 0;
+    margin-top: 17px;
+  }
+
+  .meal {
+    flex: 0 1 100%;
+    max-width: 100%;
+  }
+
+  .menu {
+    margin-top: 7rem;
+  }
+
+  .reservation-form form {
+    width: 40%;
+  }
+
+  .reservation-form {
+    margin-top: 6.5rem;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .reservation-form h1 {
+    font-size: 50px;
+  }
+
+  .cardPageDetail img {
+    max-width: 370px;
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .cardPageDetail {
+    font-size: 20px;
+    display: block;
+    z-index: 20;
+    background: white;
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 770px;
+  }
+
+  .foodDetailsPage .filters {
+    margin-left: 30px;
+  }
+
+  .foodDetailsPage {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 20px;
+    padding-top: 10rem;
+  }
+
+}

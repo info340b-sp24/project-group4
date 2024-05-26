@@ -1,0 +1,218 @@
+[
+    {
+        "name": "Bibimbap Cupbop",
+        "veganoption": true,
+        "gfoption": false,
+        "spicy": false,
+        "seafood": false,
+        "calories": 350,
+        "img": "/Images/Bibimbap1.png"
+    },
+    {
+        "name": "Ridge Cupbop",
+        "veganoption": false,
+        "gfoption": true,
+        "spicy": false,
+        "seafood": false,
+        "calories": 340,
+        "img": "/Images/Ridge-Cupbop.jpg"
+    },
+    {
+        "name": "Bulgulgi Cupbop",
+        "veganoption": false,
+        "gfoption": false,
+        "spicy": false,
+        "seafood": false,
+        "calories": 380,
+        "img": "/Images/Bulgogi-Cupbop1.png"
+    },
+    {
+        "name": "Bibim Ramen",
+        "veganoption": false,
+        "gfoption": true,
+        "spicy": false,
+        "seafood": false,
+        "calories": 400,
+        "img": "/Images/Bibim-Ramen1.png"
+    },
+    {
+        "name": "Kimchi Fried Rice",
+        "veganoption": true,
+        "gfoption": true,
+        "spicy": true,
+        "seafood": false,
+        "calories": 300,
+        "img": "/Images/KFR.jpg"
+    },
+    {
+        "name": "Curry Chicken Cupbop",
+        "veganoption": false,
+        "gfoption": false,
+        "spicy": true,
+        "seafood": true,
+        "calories": 200,
+        "img": "/Images/Curry-Cupbop.jpg"
+    },
+    {
+        "name": "Korean Army Ramen",
+        "veganoption": false,
+        "gfoption": false,
+        "spicy": true,
+        "seafood": false,
+        "calories": 280,
+        "img": "/Images/Army-Ramen.jpg"
+    },
+    {
+        "name": "Spicy Curry Ramen",
+        "veganoption": true,
+        "gfoption": false,
+        "spicy": true,
+        "seafood": false,
+        "calories": 430,
+        "img": "/Images/Spicy-Curry-Ramen.jpg"
+    },
+    {
+        "name": "Shio",
+        "veganoption": true,
+        "gfoption": false,
+        "spicy": true,
+        "seafood": true,
+        "calories": 130,
+        "img": "/Images/Ramen-Shio.png"
+    },
+    {
+        "name": "Miso",
+        "veganoption": true,
+        "gfoption": false,
+        "spicy": false,
+        "seafood": true,
+        "calories": 220,
+        "img": "/Images/Ramen-Miso2.jpg"
+    },
+    {
+        "name": "Korean Spicy Ramen",
+        "veganoption": false,
+        "gfoption": false,
+        "spicy": true,
+        "seafood": false,
+        "calories": 290,
+        "img": "/Images/Ramen-Korean-Spicy.jpg"
+    },
+    {
+        "name": "Shoyu",
+        "veganoption": true,
+        "gfoption": false,
+        "spicy": false,
+        "seafood": false,
+        "calories": 180,
+        "img": "/Images/Ramen-Shoyu3.jpg"
+    },
+    {
+        "name": "Korean BBQ Chicken Wings",
+        "veganoption": false,
+        "gfoption": false,
+        "spicy": false,
+        "seafood": false,
+        "calories": 450,
+        "img": "/Images/Wings.jpg"
+    },
+    {
+        "name": "Seafood Pancake",
+        "veganoption": false,
+        "gfoption": false,
+        "spicy": false,
+        "seafood": true,
+        "calories": 500,
+        "img": "/Images/Seafood-Pancake3.jpg"
+    },
+    {
+        "name": "Kimchi Pancake",
+        "veganoption": false,
+        "gfoption": false,
+        "spicy": true,
+        "seafood": false,
+        "calories": 270,
+        "img": "/Images/Kimchi-Pancake1.png"
+    },
+    {
+        "name": "Okonomiyaki",
+        "veganoption": false,
+        "gfoption": false,
+        "spicy": false,
+        "seafood": true,
+        "calories": 420,
+        "img": "/Images/Okonomoyaki.jpg"
+    },
+    {
+        "name": "Tteokbokki",
+        "veganoption": false,
+        "gfoption": false,
+        "spicy": true,
+        "seafood": false,
+        "calories": 410,
+        "img": "/Images/Tteokbokki1.png"
+    },
+    {
+        "name": "Soondubu",
+        "veganoption": true,
+        "gfoption": true,
+        "spicy": false,
+        "seafood": false,
+        "calories": 510,
+        "img": "/Images/Soondubu.jpg"
+    },
+    {
+        "name": "Bulgogi Salad",
+        "veganoption": false,
+        "gfoption": true,
+        "spicy": true,
+        "seafood": false,
+        "calories": 320,
+        "img": "/Images/Bulgogi-Salad.png"
+    },
+    {
+        "name": "House Salad",
+        "veganoption": true,
+        "gfoption": true,
+        "spicy": false,
+        "seafood": false,
+        "calories": 110,
+        "img": "/Images/Salad.jpg"
+    },
+    {
+        "name": "Classic Seaweed Salad",
+        "veganoption": true,
+        "gfoption": false,
+        "spicy": false,
+        "seafood": true,
+        "calories": 100,
+        "img": "/Images/Seaweed-Salad.jpg"
+    },
+    {
+        "name": "Edamame",
+        "veganoption": true,
+        "gfoption": false,
+        "spicy": false,
+        "seafood": false,
+        "calories": 80,
+        "img": "/Images/Edamame1.png"
+    },
+    {
+        "name": "Chinese Egg Rolls",
+        "veganoption": true,
+        "gfoption": false,
+        "spicy": false,
+        "seafood": false,
+        "calories": 160,
+        "img": "/Images/Chinese-Egg-Roll1.png"
+    },
+    {
+        "name": "Korean Noodle Rolls",
+        "veganoption": false,
+        "gfoption": false,
+        "spicy": true,
+        "seafood": false,
+        "calories": 250,
+        "img": "/Images/Noodle-Roll.jpg"
+    }
+]

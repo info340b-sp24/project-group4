@@ -1,13 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FoodCard } from './FoodCard';
 import _ from 'lodash';
 import { Outlet } from 'react-router-dom';
+import FOOD_DETAILS2 from '../data/fooddetails.json';
+import { getDatabase, ref, get, update, set, child } from 'firebase/database';
 
-export function FoodDetails(props) {
+export function FoodDetails() {
     const [caloriesAscending, setCaloriesAscending] = useState(true);
     const [sortCriterias, setSortCriterias] = useState([]);
+    const [FOOD_DETAILS, setFOOD_DETAILS] = useState(null);
 
-    let sortedByCalories = _.sortBy(props.data, 'calories');
+    const db = getDatabase();
+    const FoodDataRef = ref(db, "FoodDetails/FoodDetailsData");
+
+    useEffect(() => {
+        get(FoodDataRef).then((snapshot) => {
+            if (snapshot.exists()) {
+                setFOOD_DETAILS(snapshot.val());
+            } else {
+                setFOOD_DETAILS(FOOD_DETAILS2);
+            }
+        }).catch((error) => {
+            console.error('Error getting data:', error);
+        });
+    }, []);
+
+    let sortedByCalories = _.sortBy(FOOD_DETAILS, 'calories');
 
     function sortCalories() {
         setCaloriesAscending(!caloriesAscending);
@@ -33,7 +51,6 @@ export function FoodDetails(props) {
     let filteredData = sortedByCalories;
 
     if (sortCriterias.length > 0) {
-
         filteredData = filteredData.filter((foodItem) => {
             return sortCriterias.every((filter) => {
                 switch (filter) {
@@ -52,17 +69,42 @@ export function FoodDetails(props) {
         });
     }
 
+    function addRating(foodName, rating) {
+        const itemId = Object.keys(FOOD_DETAILS).find(
+            (key) => FOOD_DETAILS[key].name === foodName
+        );
+
+        if (itemId) {
+            const existingAvgRating = FOOD_DETAILS[itemId].avgRating === null ? 0 : parseFloat(FOOD_DETAILS[itemId].avgRating);
+            const ratingsCalc = FOOD_DETAILS[itemId].ratings === null ? 0 : parseFloat(FOOD_DETAILS[itemId].ratings + 1);
+            const avgRatingCalc = (existingAvgRating * (ratingsCalc - 1) + parseFloat(rating)) / ratingsCalc;
+
+            const updatedItem = {
+                ratings: ratingsCalc,
+                avgRating: avgRatingCalc,
+            };
+
+            update(child(ref(db), `FoodDetails/FoodDetailsData/${itemId}`), updatedItem)
+                .then(() => {
+                    console.log('Ratings updated successfully!');
+                })
+                .catch((error) => {
+                    console.error('Error updating data:', error);
+                });
+        }
+    }
+
     var foods = filteredData.map((food) => (
         <div key={food.name}>
-            <FoodCard foodItem={food} name={food.name} vegan_option={food.veganoption} gf_option={food.gfoption} spicy={food.spicy} seafood={food.seafood} calories={food.calories} img={food.img} />
+            <FoodCard foodItem={food} name={food.name} vegan_option={food.veganoption} gf_option={food.gfoption} spicy={food.spicy} seafood={food.seafood} calories={food.calories} img={food.img} addratingfunc={addRating} />
         </div>
     ));
 
 
     return (
         <div className="foodDetailsPage">
-            <h1>Check food details here!</h1>
-            <div class="filters">
+            <h1>Filter for food dietary details here!</h1>
+            <div className="filters">
                 <p>Sort by calories: </p>
                 <input type="checkbox" id="caloriesSort" onClick={sortCalories} />Calories Descending (Default ascending)
 

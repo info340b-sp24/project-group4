@@ -1,11 +1,14 @@
 import React from 'react';
 import _ from 'lodash';
 import FOOD_DETAILS from '../data/fooddetails.json'; 
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom';
+
+
 
 export function FoodCardPage() {
     const { foodName } = useParams();
     const foodNameString = decodeURIComponent(foodName);
+    
 
     let food = _.find(FOOD_DETAILS, { name: foodNameString });
 

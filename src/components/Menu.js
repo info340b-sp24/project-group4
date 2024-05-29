@@ -57,14 +57,21 @@ function formatCategoryTitle(category) {
 }
 
 export function Menu() {
+    const categories = Object.keys(menuData).map(category => {
+        return {
+            title: formatCategoryTitle(category),
+            meals: menuData[category]
+        };
+    });
+
     return (
         <div className="menu">
-            {Object.keys(menuData).map(category => (
-                <div key={category} className="menu-category">
-                    <h2>{formatCategoryTitle(category)}</h2>
+            {categories.map(({ title, meals }, categoryIndex) => (
+                <div key={categoryIndex} className="menu-category">
+                    <h2>{title}</h2>
                     <div className="meals">
-                        {menuData[category].map((meal, index) => (
-                            <Meal key={index} {...meal} />
+                        {meals.map((meal, mealIndex) => (
+                            <Meal key={mealIndex} {...meal} />
                         ))}
                     </div>
                 </div>

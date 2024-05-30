@@ -96,7 +96,7 @@ export function FoodDetails() {
 
     var foods = filteredData.map((food) => (
         <div key={food.name}>
-            <FoodCard foodItem={food} name={food.name} vegan_option={food.veganoption} gf_option={food.gfoption} spicy={food.spicy} seafood={food.seafood} calories={food.calories} img={food.img} addratingfunc={addRating} />
+            <FoodCard foodItem={food} name={food.name} vegan_option={food.veganoption} gf_option={food.gfoption} spicy={food.spicy} seafood={food.seafood} calories={food.calories} img={food.img} addratingfunc={addRating}  />
         </div>
     ));
 

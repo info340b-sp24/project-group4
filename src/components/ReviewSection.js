@@ -6,7 +6,7 @@ const images = require.context('../../public/Images/ReviewPhotos', true);
 
 export function ReviewSection() {
     const [imageList, setImageList] = useState(images.keys().map(image => images(image)));
-    const [reviewList, setReviewList] = useState(["Friendly service and good food. What more can you ask for? After visiting Snoqualmie Falls, we stopped in for lunch. Cozy place with good selection of dry and soupy dishes. Ramen was non fried Japanese style soup. Yummy and soothing. Kimchi pancake was not spicy and perfect dip in the sauce that came with it. We're definitely stopping by again next time we visit the area again.", "Delicious food and great service. Walk in and order first, then sit down. Their kitchen is fast! Complimentary barley tea :) and kimchi.", "The food is delicious and the staff is wonderful. We're big fans of the ramen and hot pots!", "Awesome little restaurant with friendly service and great tasting food. The menu is large and offers lots of choices including vegetarian options. Loved our visit here and will definitely return!", "This place is sooooo yummy! The ramen is very good. You can dine in or take out. There are seats/tables inside and outside for sunny days.", "The food was awesome. My husband got the spicy ramen with pork belly and I got the shoyu vegetarian. We both truly enjoyed our dishes and the environment was so welcoming. Very fast and kind service. Limited drink options but that's ok."]);
+    const [reviewList, setReviewList] = useState(["Sooo cute! The atmosphere is great and place is cozy.", "Delicious food and great service. Walk in and order first, then sit down. Their kitchen is fast! Complimentary barley tea :) and kimchi.", "The food is delicious and the staff is wonderful. We're big fans of the ramen and hot pots!", "Awesome little restaurant with friendly service and great tasting food. The menu is large and offers lots of choices including vegetarian options. Loved our visit here and will definitely return!", "This place is sooooo yummy! The ramen is very good. You can dine in or take out. There are seats/tables inside and outside for sunny days.", "The food was awesome. My husband got the spicy ramen with pork belly and I got the shoyu vegetarian. We both truly enjoyed our dishes and the environment was so welcoming. Very fast and kind service. Limited drink options but that's ok."]);
 
     const [currentReview, setCurrentReview] = useState(0);
     const [showNotification, setShowNotification] = useState(false);
@@ -58,9 +58,10 @@ export function ReviewSection() {
             .then((snapshot) => {
                 return getDownloadURL(snapshot.ref);
             }).then((downloadURL) => {
+                const newImageList = [...imageList, downloadURL];
+
                 setImageList([...imageList, downloadURL]);
                 setReviewList([...reviewList, event.target.textRev.value]);
-
                 let index = imageList.length;
                 set(child(ref(db), `Reviews/ReviewsPicturesURL/${index}`), downloadURL)
                     .catch((error) => {
@@ -71,7 +72,7 @@ export function ReviewSection() {
                     .catch((error) => {
                         console.error(error);
                     });
-                setCurrentReview(reviewList.length - 1);
+                setCurrentReview(newImageList.length - 1);
                 setShowNotification(true);
             })
             .catch((error) => console.error(error));

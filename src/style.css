@@ -334,7 +334,6 @@ nav img {
   margin-bottom: 0;
 }
 
-
 .reservation-form h1 {
   color: white;
   text-align: center;
@@ -529,7 +528,6 @@ input[type="date"]:focus {
     font-family: "Nunito", Arial, Calibri, sans-serif;
     font-size: 15px;
     padding-left: 10px;
-    background-color: rgba(128, 128, 128, 0.5);
   }
 
   .reviewContainer .noti {

@@ -2,6 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import FOOD_DETAILS from '../data/fooddetails.json'; 
 import { Link, useParams } from 'react-router-dom';
+import { AddInput } from './AddInput'; 
 
 
 
@@ -31,6 +32,8 @@ export function FoodCardPage() {
                 <p>Contains seafood? {food.seafood ? 'Yes' : 'No'}.</p>
                 </div>
             </div>
+            {/* Add user comment add/or image */}
+            <AddInput foodName={foodNameString} />
         </div>
     );
 }

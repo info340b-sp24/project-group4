@@ -22,6 +22,7 @@ nav {
   background-color: #000000;
   padding: 1.12rem;
   z-index: 10;
+  height: 7.7vh;
 }
 
 nav .sideMenu {
@@ -80,7 +81,7 @@ nav img {
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 4px;
-  padding-bottom: 20px;
+  min-height: 100vh;
 }
 
 .homeSlideshowBackground {
@@ -94,6 +95,8 @@ nav img {
   margin-left: 1rem;
   color: black;
 }
+
+/* home page review section */
 
 .reviewContainer {
   display: flex;
@@ -112,7 +115,12 @@ nav img {
 }
 
 .textReviewInput {
-  max-width: 23rem;
+  width: 94vw;
+  height: 87px;
+}
+
+.reviewContainer input {
+  margin-top: 4px;
 }
 
 .reviewContainer button {
@@ -153,6 +161,8 @@ nav img {
   justify-content: left;
   gap: 10px;
 }
+
+/* meal cards */
 
 .meal {
   flex: 0 1 calc(50% - 20px);
@@ -215,8 +225,18 @@ nav img {
   padding: 20px;
   padding-top: 8rem;
 }
+
 .foodDetailsPage input {
   margin-left: 10px;
+}
+
+.foodDetailsPage .filters {
+  margin-left: 3px;
+}
+
+.foodDetailsContainer {
+  display: flex;
+  align-items: top;
 }
 
 .foodDetails {
@@ -226,6 +246,8 @@ nav img {
   flex-grow: 0;
   justify-content: center;
 }
+
+/* food dietary details cards */
 
 .foodCard {
   box-sizing: border-box;
@@ -298,10 +320,6 @@ nav img {
   max-width: 770px;
 }
 
-.foodDetailsPage .filters {
-  margin-left: 3px;
-}
-
 .cardPageDetail img {
   max-width: 200px;
   display: inline-block;
@@ -310,11 +328,6 @@ nav img {
 
 .cardPageDetail .material-icons {
   color: black;
-}
-
-.foodDetailsContainer {
-  display: flex;
-  align-items: top;
 }
 
 /* reservations page */
@@ -523,6 +536,8 @@ input[type="date"]:focus {
 
   }
 
+  /* home page review section */
+
   .textReviewArea {
     max-width: 20rem;
     font-family: "Nunito", Arial, Calibri, sans-serif;
@@ -550,10 +565,11 @@ input[type="date"]:focus {
     color: #ebe3d8;
   }
 
-  .textReviewInput {
+  .reviewContainer .textReviewInput {
     display: block;
     height: 100px;
     width: 350px;
+    margin-top: 18.7px;
   }
 
   .reviewImgs {

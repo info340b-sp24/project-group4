@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import _ from 'lodash';
-import FOOD_DETAILS2 from '../data/fooddetails.json';
 import { Link, useParams } from 'react-router-dom';
-import { getDatabase, ref, onValue, get } from "firebase/database";
+import { getDatabase, ref, get, update, child, set } from "firebase/database";
 import StarRatings from 'react-star-ratings';
-
-
-
 
 export function FoodCardPage() {
     const [FOOD_DETAILS, setFOOD_DETAILS] = useState(null);
     const [currRatings, setCurrRatings] = useState(0);
     const [currAvgRatings, setCurrAvgRatings] = useState(0);
+    const [comments, setComments] = useState([]);
 
     const { foodName } = useParams();
     const foodNameString = decodeURIComponent(foodName);
@@ -48,7 +45,44 @@ export function FoodCardPage() {
         if (itemId) {
             setCurrAvgRatings(FOOD_DETAILS[itemId].avgRating);
             setCurrRatings(FOOD_DETAILS[itemId].ratings);
+            setComments(FOOD_DETAILS[itemId].comments);
         }
+    }
+
+    const commentList = () => {
+        return (
+            <div className="comments">
+                <h2>Comments</h2>
+                {comments.map((comment, index) => (
+                    <div key={index} className="aComment">
+                        {comment}
+                    </div>
+                ))}
+            </div>
+        );
+    };
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        const dateTime = new Date();
+        const currentTime = dateTime.toLocaleString();
+        const newComment = `${currentTime} - ${event.target.comment.value}`;
+        const updatedComments = [...comments, newComment];
+
+        const itemId = Object.keys(FOOD_DETAILS).find(
+            (key) => FOOD_DETAILS[key].name === foodName
+        );
+
+        let index = updatedComments.length;
+
+        if (itemId) {
+            set(child(ref(db), `FoodDetails/FoodDetailsData/${itemId}/comments/${index}`), newComment)
+                .catch((error) => {
+                    console.error('Error updating data:', error);
+                });
+        }
+
+        setComments(updatedComments);
     }
 
     let food = _.find(FOOD_DETAILS, { name: foodNameString });
@@ -61,25 +95,33 @@ export function FoodCardPage() {
         <div aria-label='pop up food card detail' className="cardPageDetail">
             <Link to={`/foodDetails`} className="btn btn-primary material-icons">close</Link>
 
-            <h1>Food Details for {food.name} ({food.calories} Calories)</h1>
-
+            <h1>{food.name} ({food.calories} Calories)</h1>
+            <p>{currRatings === null ? '0' : (currRatings)} ratings, {currAvgRatings === null ? '' : (currAvgRatings.toFixed(2))} stars</p>
+            <StarRatings
+                rating={currAvgRatings}
+                starRatedColor="gold"
+                starDimension="20px"
+                numberOfStars={5}
+                name='rating'
+            />
             <div className='foodDetailsContainer'>
                 <img src={food.img} alt='{food.name}' />
                 <div>
-                    <p>Has gluten free options? {food.gfoption ? 'Yes' : 'No'}.</p>
-                    <p>Has vegan options? {food.veganoption ? 'Yes' : 'No'}.</p>
+                    <p>Gluten free options? {food.gfoption ? 'Yes' : 'No'}.</p>
+                    <p>Vegan options? {food.veganoption ? 'Yes' : 'No'}.</p>
                     <p>Spicy? {food.spicy ? 'Yes' : 'No'}.</p>
                     <p>Contains seafood? {food.seafood ? 'Yes' : 'No'}.</p>
-                    <p>Total ratings: {currRatings === null ? '' : (currRatings)}</p>
-                    <p>Average rating: {currAvgRatings === null ? '' : (currAvgRatings.toFixed(2))}</p>
-                    <StarRatings
-                        rating={currAvgRatings}
-                        starRatedColor="gold"
-                        starDimension="20px"
-                        numberOfStars={5}
-                        name='rating'
-                    />
                 </div>
+            </div>
+            {commentList()}
+            <div>
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <label htmlFor="comment">Comment:</label>
+                        <textarea id="comment" name="comment" ></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
             </div>
         </div>
     );

@@ -320,6 +320,11 @@ nav img {
   max-width: 770px;
 }
 
+.cardPageDetail > p {
+  margin-right: 10px;
+  display: inline;
+}
+
 .cardPageDetail img {
   max-width: 200px;
   display: inline-block;
@@ -328,6 +333,27 @@ nav img {
 
 .cardPageDetail .material-icons {
   color: black;
+}
+
+/* food card comments */
+
+.cardPageDetail .comments {
+  margin-top: 10px;
+  flex-direction: column;
+  display: flex;
+  overflow-y: auto;
+}
+
+.cardPageDetail .comments .aComment {
+  min-width: 40vw;
+  position: relative;
+  top: 10px;
+  padding-bottom: 27px;
+}
+
+.cardPageDetail .comments h2 {
+  padding: 0;
+  margin-bottom: 0;
 }
 
 /* reservations page */

@@ -37,6 +37,7 @@ export function ReviewSection() {
 
 
     function handleClick(event) {
+        
         if (currentReview === reviewList.length - 1) {
             setCurrentReview(0);
         } else {

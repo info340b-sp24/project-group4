@@ -3,7 +3,7 @@ import { FoodCard } from './FoodCard';
 import _ from 'lodash';
 import { Outlet } from 'react-router-dom';
 import FOOD_DETAILS2 from '../data/fooddetails.json';
-import { getDatabase, ref, get, update, set, child } from 'firebase/database';
+import { getDatabase, ref, get, update, child } from 'firebase/database';
 
 export function FoodDetails() {
     const [caloriesAscending, setCaloriesAscending] = useState(true);
@@ -85,9 +85,6 @@ export function FoodDetails() {
             };
 
             update(child(ref(db), `FoodDetails/FoodDetailsData/${itemId}`), updatedItem)
-                .then(() => {
-                    console.log('Ratings updated successfully!');
-                })
                 .catch((error) => {
                     console.error('Error updating data:', error);
                 });

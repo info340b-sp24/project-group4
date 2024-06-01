@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { getDatabase, ref, get, set, child } from 'firebase/database';
 
 export function ReservationsPage() {
   const [reservationStatus, setReservationStatus] = useState('');
   const [formSubmitted, setFormSubmitted] = useState(false); 
+
+  const db = getDatabase();
 
   const validateForm = (formData) => {
     const { date, time, people, fname, email, phone } = formData;

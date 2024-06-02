@@ -73,14 +73,16 @@ export function FoodCardPage() {
     }
 
     const commentList = () => {
+        const commentsArray = comments.map((comment, index) => (
+            <div key={index} className="aComment">
+                {comment}
+            </div>
+        ));
+
         return (
             <div className="comments">
                 <h2>Comments</h2>
-                {comments.map((comment, index) => (
-                    <div key={index} className="aComment">
-                        {comment}
-                    </div>
-                ))}
+                {commentsArray}
             </div>
         );
     };

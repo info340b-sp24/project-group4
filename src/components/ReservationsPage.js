@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getDatabase, ref, get, set } from 'firebase/database';
+import { Link } from 'react-router-dom';
 
 const useReservations = (date) => {
   const [reservations, setReservations] = useState([]);
@@ -101,28 +102,34 @@ export function ReservationsPage() {
       remainingSpotsUpdates = remainingSpotsUpdates.filter(num => num !== 0);
     }
 
-    return (
-      availableTimesWithSpots.map((time, index) => (
-        <option key={time} value={time}>
-          {time} ({remainingSpotsUpdates[index]} spots remaining)
-        </option>
-      ))
-    );
+    const adjustedAvailableTimes = availableTimesWithSpots.map((time, index) => (
+      <option key={time} value={time}>
+        {time} ({remainingSpotsUpdates[index]} spots remaining)
+      </option>
+    ));
+
+    return adjustedAvailableTimes;
   }
 
   if (formSubmitted) {
-    return <div className="reservation-success-message">{reservationStatus}</div>;
+    return (
+      <div>
+        <div className="reservation-success-message">{reservationStatus}
+          <Link to={`/menu`} className="btn btn-primary backButton">Browse Our Menu</Link>
+        </div>
+      </div>
+    )
   }
 
   return (
     <div className="reservation-form">
       <h1>Make a Reservation</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="fname">First name:</label>
+        <label for="fname">First name:</label>
         <input type="text" id="fname" name="fname" placeholder="Tim" required />
-        <label htmlFor="lname">Last name:</label>
+        <label for="lname">Last name:</label>
         <input type="text" id="lname" name="lname" placeholder="Carlson" />
-        <label htmlFor="date">Date:</label>
+        <label for="date">Date:</label>
         <input
           type="date"
           id="date"
@@ -130,7 +137,8 @@ export function ReservationsPage() {
           onChange={(e) => setDate(e.target.value)}
           required
         />
-        <label htmlFor="people">Number of People:</label>
+        <label for="people">Number of People:</label>
+        <p> *Max party of 20. A larger party will not show any available time slots for courtesy of all our customers. </p>
         <input
           type="number"
           id="people"
@@ -138,14 +146,15 @@ export function ReservationsPage() {
           onChange={(e) => setPeople(Number(e.target.value))}
           required
         />
-        <label htmlFor="time">Time:</label>
+        <label for="time">Time:</label>
+        <p> Only available time slots are shown for the chosen date and adjusted according to the number of people in your party. </p>
         <select id="time" name="time" required>
           <option value="">Select a time</option>
           {availableTimesDisplay()}
         </select>
-        <label htmlFor="email">Email:</label>
+        <label for="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="txxxxx@uw.edu" required />
-        <label htmlFor="phone">Phone Number:</label>
+        <label for="phone">Phone Number:</label>
         <input type="tel" id="phone" name="phone" placeholder="1234567890" required />
         <button type="submit">Submit</button>
       </form>

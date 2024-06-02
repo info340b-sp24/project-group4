@@ -41,6 +41,36 @@ export function FoodDetails() {
         window.location.reload();
     }
 
+    function addRating(foodName, rating) {
+        const itemId = Object.keys(FOOD_DETAILS).find(
+            (key) => FOOD_DETAILS[key].name === foodName
+        );
+
+        if (itemId) {
+            const existingAvgRating = FOOD_DETAILS[itemId].avgRating === null ? 0 : parseFloat(FOOD_DETAILS[itemId].avgRating);
+            const ratingsCalc = FOOD_DETAILS[itemId].ratings === null ? 0 : parseFloat(FOOD_DETAILS[itemId].ratings + 1);
+            const avgRatingCalc = (existingAvgRating * (ratingsCalc - 1) + parseFloat(rating)) / ratingsCalc;
+
+            const updatedItem = {
+                ratings: ratingsCalc,
+                avgRating: avgRatingCalc,
+            };
+
+            update(child(ref(db), `FoodDetails/FoodDetailsData/${itemId}`), updatedItem)
+                .catch((error) => {
+                    console.error('Error updating data:', error);
+                });
+        }
+    }
+
+    function handleChangeRanking(event) {
+        setSelectedRanking(event.target.value);
+    }
+
+    function handleReverse() {
+        setIsDescending(!isDescending);
+    }
+
     if (isDescending) {
         _.reverse(sortedFoods);
     }
@@ -66,41 +96,11 @@ export function FoodDetails() {
         });
     }
 
-    function addRating(foodName, rating) {
-        const itemId = Object.keys(FOOD_DETAILS).find(
-            (key) => FOOD_DETAILS[key].name === foodName
-        );
-
-        if (itemId) {
-            const existingAvgRating = FOOD_DETAILS[itemId].avgRating === null ? 0 : parseFloat(FOOD_DETAILS[itemId].avgRating);
-            const ratingsCalc = FOOD_DETAILS[itemId].ratings === null ? 0 : parseFloat(FOOD_DETAILS[itemId].ratings + 1);
-            const avgRatingCalc = (existingAvgRating * (ratingsCalc - 1) + parseFloat(rating)) / ratingsCalc;
-
-            const updatedItem = {
-                ratings: ratingsCalc,
-                avgRating: avgRatingCalc,
-            };
-
-            update(child(ref(db), `FoodDetails/FoodDetailsData/${itemId}`), updatedItem)
-                .catch((error) => {
-                    console.error('Error updating data:', error);
-                });
-        }
-    }
-
-    var foods = filteredData.map((food) => (
+    let foods = filteredData.map((food) => (
         <div key={food.name}>
             <FoodCard foodItem={food} name={food.name} vegan_option={food.veganoption} gf_option={food.gfoption} spicy={food.spicy} seafood={food.seafood} calories={food.calories} img={food.img} addratingfunc={addRating}  />
         </div>
     ));
-
-    function handleChangeRanking(event) {
-        setSelectedRanking(event.target.value);
-    }
-    function handleReverse() {
-        setIsDescending(!isDescending);
-    }
-
 
     return (
         <div className="foodDetailsPage">

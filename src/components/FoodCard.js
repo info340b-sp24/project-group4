@@ -1,14 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
 import StarRatings from 'react-star-ratings';
-import { getDatabase, ref, set as firebaseSet } from 'firebase/database';
-
-
 
 export function FoodCard(props) {
-  const db = getDatabase();
-  const FoodDataRef = ref(db, "FoodDetailsData");
-
   const [rating, setRating] = useState(0);
 
   const changeRating = (newRating) => {
@@ -16,8 +10,6 @@ export function FoodCard(props) {
     console.log(newRating);
     props.addratingfunc(props.name, newRating);
   };
-
-
 
   return (
     <div className="foodCard">

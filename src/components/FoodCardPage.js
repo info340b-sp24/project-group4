@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import _ from 'lodash';
 import { Link, useParams } from 'react-router-dom';
-import { getDatabase, ref, get, update, child, set } from "firebase/database";
+import { getDatabase, ref, get, child, set } from "firebase/database";
 import StarRatings from 'react-star-ratings';
 
 export function FoodCardPage() {
@@ -49,19 +49,6 @@ export function FoodCardPage() {
         }
     }
 
-    const commentList = () => {
-        return (
-            <div className="comments">
-                <h2>Comments</h2>
-                {comments.map((comment, index) => (
-                    <div key={index} className="aComment">
-                        {comment}
-                    </div>
-                ))}
-            </div>
-        );
-    };
-
     function handleSubmit(event) {
         event.preventDefault();
         const dateTime = new Date();
@@ -85,8 +72,20 @@ export function FoodCardPage() {
         setComments(updatedComments);
     }
 
-    let food = _.find(FOOD_DETAILS, { name: foodNameString });
+    const commentList = () => {
+        return (
+            <div className="comments">
+                <h2>Comments</h2>
+                {comments.map((comment, index) => (
+                    <div key={index} className="aComment">
+                        {comment}
+                    </div>
+                ))}
+            </div>
+        );
+    };
 
+    let food = _.find(FOOD_DETAILS, { name: foodNameString });
     if (!food) {
         return <div>Food not found</div>;
     }
@@ -94,7 +93,6 @@ export function FoodCardPage() {
     return (
         <div aria-label='pop up food card detail' className="cardPageDetail">
             <Link to={`/foodDetails`} className="btn btn-primary material-icons">close</Link>
-
             <h1>{food.name} ({food.calories} Calories)</h1>
             <p>{currRatings === null ? '0' : (currRatings)} ratings, {currAvgRatings === null ? '' : (currAvgRatings.toFixed(2))} stars</p>
             <StarRatings

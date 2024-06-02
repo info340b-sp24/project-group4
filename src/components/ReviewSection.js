@@ -28,7 +28,6 @@ export function ReviewSection() {
         get(reviewsPicListRef).then((snapshot) => {
             if (snapshot.exists()) {
                 setImageList(snapshot.val());
-                console.log("got image list");
             }
         }).catch((error) => {
             console.error('Error getting data:', error);

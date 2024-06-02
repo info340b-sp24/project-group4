@@ -88,9 +88,23 @@ export function ReservationsPage() {
     setReservationStatus(message);
   };
 
-  const availableTimes = ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00'].filter(time => (
-    !reservations.some(res => res.time === time && res.people >= people)
-  ));
+  const availableTimesDisplay = () => {
+    const availableTimes = ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00'].filter(time => {
+      let remainingSpots = 20;
+      for (let i = 0; i < reservations.length; i++) {
+        if (reservations[i].time === time) {
+          remainingSpots -= reservations[i].people;
+        }
+      }
+      return (remainingSpots - people) >= 0;
+    });
+
+    return (
+      availableTimes.map(time => (
+        <option key={time} value={time}>{time}</option>
+      ))
+    )
+  }
 
   if (formSubmitted) {
     return <div className="reservation-success-message">{reservationStatus}</div>;
@@ -123,9 +137,7 @@ export function ReservationsPage() {
         <label htmlFor="time">Time:</label>
         <select id="time" name="time" required>
           <option value="">Select a time</option>
-          {availableTimes.map(time => (
-            <option key={time} value={time}>{time}</option>
-          ))}
+          {availableTimesDisplay()}
         </select>
         <label htmlFor="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="txxxxx@uw.edu" required />

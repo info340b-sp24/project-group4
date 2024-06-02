@@ -7,7 +7,6 @@ export function FoodCard(props) {
 
   const changeRating = (newRating) => {
     setRating(newRating);
-    console.log(newRating);
     props.addratingfunc(props.name, newRating);
   };
 

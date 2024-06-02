@@ -36,7 +36,6 @@ export function ReviewSection() {
 
 
     function handleClick(event) {
-        
         if (currentReview === reviewList.length - 1) {
             setCurrentReview(0);
         } else {
@@ -60,18 +59,19 @@ export function ReviewSection() {
             }).then((downloadURL) => {
                 const newImageList = [...imageList, downloadURL];
 
-                setImageList([...imageList, downloadURL]);
+                setImageList(newImageList);
                 setReviewList([...reviewList, event.target.textRev.value]);
+
                 let index = imageList.length;
                 set(child(ref(db), `Reviews/ReviewsPicturesURL/${index}`), downloadURL)
                     .catch((error) => {
                         console.error(error);
                     });
-                
                 set(child(ref(db), `Reviews/ReviewsListData/${index}`), event.target.textRev.value)
                     .catch((error) => {
                         console.error(error);
                     });
+                
                 setCurrentReview(newImageList.length - 1);
                 setShowNotification(true);
             })

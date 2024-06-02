@@ -115,20 +115,20 @@ export function FoodDetails() {
                 </select>
 
                 <input type="checkbox" id="reverseSort" name = "resverseSort" onClick={handleReverse} />
-                <label for="reverseSort">Sort by Descending (Defaulted to ascending)</label>
+                <label htmlFor="reverseSort">Sort by Descending (Defaulted to ascending)</label>
 
 
                 <h2>Include:</h2>
                 <input type="checkbox" id="seafood" name="seafood" onClick={filters} />
-                <label for="seafood">Seafood</label>
+                <label htmlFor="seafood">Seafood</label>
                 <input type="checkbox" id="veganoption" name="veganoption" onClick={filters} />
-                <label for="veganoption">Vegan Options</label>
+                <label htmlFor="veganoption">Vegan Options</label>
                 <input type="checkbox" id="gfoption" name="gfoption" onClick={filters} />
-                <label for="gfoption">Gluten Free Options</label>
+                <label htmlFor="gfoption">Gluten Free Options</label>
                 <input type="checkbox" id="spicy" name="spicy" onClick={filters} />
-                <label for="spicy">Spicy</label>
+                <label htmlFor="spicy">Spicy</label>
                 <input type="checkbox" id="clear" onClick={clearCriterias} />
-                <label for="clear">Clear Criterias</label>
+                <label htmlFor="clear">Clear Criterias</label>
 
             </div>
             <div className="foodDetails">

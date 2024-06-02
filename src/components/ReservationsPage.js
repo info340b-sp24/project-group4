@@ -36,7 +36,6 @@ export function ReservationsPage() {
   const [people, setPeople] = useState(0);
 
   const reservations = useReservations(date);
-
   const db = getDatabase();
 
   const validateForm = (formData) => {
@@ -125,11 +124,11 @@ export function ReservationsPage() {
     <div className="reservation-form">
       <h1>Make a Reservation</h1>
       <form onSubmit={handleSubmit}>
-        <label for="fname">First name:</label>
+        <label htmlFor="fname">First name:</label>
         <input type="text" id="fname" name="fname" placeholder="Tim" required />
-        <label for="lname">Last name:</label>
+        <label htmlFor="lname">Last name:</label>
         <input type="text" id="lname" name="lname" placeholder="Carlson" />
-        <label for="date">Date:</label>
+        <label htmlFor="date">Date:</label>
         <input
           type="date"
           id="date"
@@ -137,7 +136,7 @@ export function ReservationsPage() {
           onChange={(e) => setDate(e.target.value)}
           required
         />
-        <label for="people">Number of People:</label>
+        <label htmlFor="people">Number of People:</label>
         <p> *Max party of 20. A larger party will not show any available time slots for courtesy of all our customers. </p>
         <input
           type="number"
@@ -146,15 +145,15 @@ export function ReservationsPage() {
           onChange={(e) => setPeople(Number(e.target.value))}
           required
         />
-        <label for="time">Time:</label>
+        <label htmlFor="time">Time:</label>
         <p> Only available time slots are shown for the chosen date and adjusted according to the number of people in your party. </p>
         <select id="time" name="time" required>
           <option value="">Select a time</option>
           {availableTimesDisplay()}
         </select>
-        <label for="email">Email:</label>
+        <label htmlFor="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="txxxxx@uw.edu" required />
-        <label for="phone">Phone Number:</label>
+        <label htmlFor="phone">Phone Number:</label>
         <input type="tel" id="phone" name="phone" placeholder="1234567890" required />
         <button type="submit">Submit</button>
       </form>

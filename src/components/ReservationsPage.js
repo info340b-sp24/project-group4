@@ -74,7 +74,6 @@ export function ReservationsPage() {
         const newReservationKey = reservations.length;
         const reservationsRef = ref(db, `Reservations/${reservationData.date}/${newReservationKey}`);
         await set(reservationsRef, reservationData);
-        console.log('Reservation data saved successfully');
         event.target.reset();
       } catch (error) {
         console.error('Error saving reservation data:', error);
@@ -89,21 +88,26 @@ export function ReservationsPage() {
   };
 
   const availableTimesDisplay = () => {
-    const availableTimes = ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00'].filter(time => {
-      let remainingSpots = 20;
-      for (let i = 0; i < reservations.length; i++) {
-        if (reservations[i].time === time) {
-          remainingSpots -= reservations[i].people;
-        }
-      }
-      return (remainingSpots - people) >= 0;
+    let availableTimes = ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00'];
+    let remainingSpotsUpdates = Array(9).fill(20);
+
+    reservations.forEach(reservation => {
+      const timeIndex = availableTimes.indexOf(reservation.time);
+      remainingSpotsUpdates[timeIndex] -= reservation.people;
     });
 
+    const availableTimesWithSpots = availableTimes.filter((time, index) => (remainingSpotsUpdates[index] - people) >= 0);
+    if (people > 0) {
+      remainingSpotsUpdates = remainingSpotsUpdates.filter(num => num !== 0);
+    }
+
     return (
-      availableTimes.map(time => (
-        <option key={time} value={time}>{time}</option>
+      availableTimesWithSpots.map((time, index) => (
+        <option key={time} value={time}>
+          {time} ({remainingSpotsUpdates[index]} spots remaining)
+        </option>
       ))
-    )
+    );
   }
 
   if (formSubmitted) {

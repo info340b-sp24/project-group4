@@ -1,24 +1,28 @@
 import React, { useState, useEffect } from 'react';
-import { getDatabase, ref, get, set, child } from 'firebase/database';
+import { getDatabase, ref, get, set } from 'firebase/database';
 
 const useReservations = (date) => {
   const [reservations, setReservations] = useState([]);
 
   useEffect(() => {
-    if (date) {
-      const db = getDatabase();
-      const reservationsRef = ref(db, `test/${date}`);
-
-      get(reservationsRef).then((snapshot) => {
-        if (snapshot.exists()) {
-          setReservations(snapshot.val());
-        } else {
-          setReservations([]);
+    const fetchReservations = async () => {
+      if (date) {
+        try {
+          const db = getDatabase();
+          const reservationsRef = ref(db, `Reservations/${date}`);
+          const snapshot = await get(reservationsRef);
+          if (snapshot.exists()) {
+            setReservations(snapshot.val());
+          } else {
+            setReservations([]);
+          }
+        } catch (error) {
+          console.error('Error getting reservations:', error);
         }
-      }).catch((error) => {
-        console.error('Error getting reservations:', error);
-      });
-    }
+      }
+    };
+
+    fetchReservations();
   }, [date]);
 
   return reservations;
@@ -26,7 +30,7 @@ const useReservations = (date) => {
 
 export function ReservationsPage() {
   const [reservationStatus, setReservationStatus] = useState('');
-  const [formSubmitted, setFormSubmitted] = useState(false); 
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const [date, setDate] = useState('');
   const [people, setPeople] = useState(0);
 
@@ -56,29 +60,27 @@ export function ReservationsPage() {
     return true;
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
     const reservationData = Object.fromEntries(formData.entries());
 
     if (validateForm(reservationData)) {
-      const reservationConfirmation = `Thank you, ${reservationData.fname}! Your reservation for ${reservationData.people} guests on ${reservationData.date} at ${reservationData.time} has been confirmed.`;
-      setReservationStatus(reservationConfirmation);
-      setFormSubmitted(true);
+      try {
+        const reservationConfirmation = `Thank you, ${reservationData.fname}! Your reservation for ${reservationData.people} guests on ${reservationData.date} at ${reservationData.time} has been confirmed.`;
+        setReservationStatus(reservationConfirmation);
+        setFormSubmitted(true);
 
-      const newReservationKey = reservations.length; 
-      const reservationsRef = ref(db, `test/${reservationData.date}/${newReservationKey}`);
-      set(reservationsRef, reservationData)
-        .then(() => {
-          console.log('Reservation data saved successfully');
-        })
-        .catch((error) => {
-          console.error('Error saving reservation data:', error);
-          displayError('There was an error processing your reservation. Please try again.');
-          setFormSubmitted(false);
-        });
-
-      event.target.reset();
+        const newReservationKey = reservations.length;
+        const reservationsRef = ref(db, `Reservations/${reservationData.date}/${newReservationKey}`);
+        await set(reservationsRef, reservationData);
+        console.log('Reservation data saved successfully');
+        event.target.reset();
+      } catch (error) {
+        console.error('Error saving reservation data:', error);
+        displayError('There was an error processing your reservation. Please try again.');
+        setFormSubmitted(false);
+      }
     }
   };
 
@@ -86,9 +88,9 @@ export function ReservationsPage() {
     setReservationStatus(message);
   };
 
-  const availableTimes = ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00'].filter(time => {
-    return !reservations.some(res => res.time === time && res.people >= people);
-  });
+  const availableTimes = ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00'].filter(time => (
+    !reservations.some(res => res.time === time && res.people >= people)
+  ));
 
   if (formSubmitted) {
     return <div className="reservation-success-message">{reservationStatus}</div>;

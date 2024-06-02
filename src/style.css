@@ -1,16 +1,11 @@
 /* general */
-html {
+html, body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-}
-
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  font-family: 'Nunito', Arial, Calibri, sans-serif; 
+  box-sizing: border-box;
 }
 
 /* navbar */
@@ -101,8 +96,7 @@ nav img {
 .reviewContainer {
   display: flex;
   flex-direction: column;
-  margin-left: 0.4rem;
-  margin-right: 0.5rem;
+  margin: 0.4rem;
   position: relative;
   color: black;
 }
@@ -165,7 +159,7 @@ nav img {
 /* meal cards */
 
 .meal {
-  flex: 0 1 calc(50% - 20px);
+  flex: 1 1 calc(50% - 20px);
   max-width: calc(50% - 20px);
   box-sizing: border-box;
   display: flex;
@@ -309,7 +303,7 @@ nav img {
 }
 
 .cardPageDetail {
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   z-index: 20;
   background: white;
@@ -332,9 +326,9 @@ nav img {
 }
 
 .cardPageDetail img {
-  max-width: 200px;
+  max-width: 12.5rem;
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 1.25rem;
 }
 
 .cardPageDetail .material-icons {
@@ -344,7 +338,8 @@ nav img {
 /* food card comments */
 
 .cardPageDetail .comments {
-  margin-top: 10px;
+  margin-top: 0.625rem;
+  /* margin-top: 10px; */
   flex-direction: column;
   display: flex;
   overflow-y: auto;

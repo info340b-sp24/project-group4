@@ -280,6 +280,7 @@ nav img {
   margin: 0 0 10px;
   color: #333;
 }
+
 .card-details h2 {
   font-family: "Lora", Calibri, sans-serif;
   font-size: 1.1rem;
@@ -320,7 +321,7 @@ nav img {
   max-width: 770px;
 }
 
-.cardPageDetail > p {
+.cardPageDetail>p {
   margin-right: 10px;
   display: inline;
 }
@@ -361,16 +362,17 @@ nav img {
 .reservation-form {
   margin: auto;
   padding: 20px;
-  padding-bottom: 100px;
-  margin-top: 7rem;
+  padding-bottom: 60px;
+  margin-top: 6rem;
+  height: 100%;
   background-image: url('../public/Images/Background_Watercolor.jpg');
   background-color: rgba(0, 0, 0, 0.75);
   background-blend-mode: darken;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 8px;
   margin-bottom: 0;
+  min-height: 100vh;
 }
 
 .reservation-form h1 {
@@ -435,26 +437,41 @@ input[type="date"]:focus {
 .reservation-status {
   margin-top: 20px;
   padding: 10px;
-  background-color: #dc3545;
+  background-color: #a9646b;
   color: white;
   text-align: center;
   border-radius: 4px;
 }
 
 .reservation-success-message {
-  padding: 200px;
+  padding: 30vw;
+  padding-top: 30vh;
+  padding-bottom: 70vh;
   margin-top: 20px;
-  background-color: #28a745;
+  background-color: #7c9f84;
   color: white;
   text-align: center;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
+}
+
+.reservation-success-message .btn {
+  margin-top: 30px;
+  color: white;
+  text-decoration: none;
+  display: block;
+  background-color: rgb(23, 20, 1);
+  padding: 10vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 20vw;
 }
 
 /* media queries */
 
 @media (min-width: 768px) {
+
   /* navbar */
   nav {
     color: white;
@@ -507,6 +524,7 @@ input[type="date"]:focus {
     border-bottom: 0.3rem solid #a8a58d;
     transition: all 0.12s ease-out;
   }
+
   nav .hamburgerMenu {
     display: none;
   }

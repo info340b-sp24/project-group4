@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getDatabase, ref, get, set } from 'firebase/database';
+import { Link } from 'react-router-dom';
 
 const useReservations = (date) => {
   const [reservations, setReservations] = useState([]);
@@ -111,7 +112,13 @@ export function ReservationsPage() {
   }
 
   if (formSubmitted) {
-    return <div className="reservation-success-message">{reservationStatus}</div>;
+    return (
+      <div>
+        <div className="reservation-success-message">{reservationStatus}
+          <Link to={`/menu`} className="btn btn-primary backButton">Browse Our Menu</Link>
+        </div>
+      </div>
+    )
   }
 
   return (

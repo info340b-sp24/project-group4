@@ -239,6 +239,11 @@ nav img {
   align-items: top;
 }
 
+.foodDetailsContainer img {
+  max-height: 37vh;
+  width: auto;
+}
+
 .foodDetails {
   display: flex;
   flex-direction: row;
@@ -343,6 +348,7 @@ nav img {
   flex-direction: column;
   display: flex;
   overflow-y: auto;
+  max-height: 27vh;
 }
 
 .cardPageDetail .comments .aComment {
@@ -433,6 +439,17 @@ input[type="date"]:focus {
 .reservation-form button:hover {
   background-color: #e3c81bb5;
 }
+
+ .reservation-form label {
+   font-size: 18px;
+ }
+
+ .reservation-form p {
+   font-size: 18px;
+   color: white;
+   padding: 0;
+   margin: 0;
+ }
 
 .reservation-status {
   margin-top: 20px;

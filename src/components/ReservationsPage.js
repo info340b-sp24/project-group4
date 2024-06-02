@@ -138,6 +138,7 @@ export function ReservationsPage() {
           required
         />
         <label htmlFor="people">Number of People:</label>
+        <p> *Max party of 20. A larger party will not show any available time slots for courtesy of all our customers. </p>
         <input
           type="number"
           id="people"
@@ -146,6 +147,7 @@ export function ReservationsPage() {
           required
         />
         <label htmlFor="time">Time:</label>
+        <p> Only available time slots are shown for the chosen date and adjusted according to the number of people in your party. </p>
         <select id="time" name="time" required>
           <option value="">Select a time</option>
           {availableTimesDisplay()}

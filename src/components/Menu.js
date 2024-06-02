@@ -64,18 +64,20 @@ export function Menu() {
         };
     });
 
+    const mealsArray = categories.map(({ title, meals }, categoryIndex) => (
+        <div key={categoryIndex} className="menu-category">
+            <h2>{title}</h2>
+            <div className="meals">
+                {meals.map((meal, mealIndex) => (
+                    <Meal key={mealIndex} {...meal} />
+                ))}
+            </div>
+        </div>
+    ));
+
     return (
         <div className="menu">
-            {categories.map(({ title, meals }, categoryIndex) => (
-                <div key={categoryIndex} className="menu-category">
-                    <h2>{title}</h2>
-                    <div className="meals">
-                        {meals.map((meal, mealIndex) => (
-                            <Meal key={mealIndex} {...meal} />
-                        ))}
-                    </div>
-                </div>
-            ))}
+            {mealsArray}
         </div>
     );
 }

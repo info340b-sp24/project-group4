@@ -6,9 +6,10 @@ import FOOD_DETAILS2 from '../data/fooddetails.json';
 import { getDatabase, ref, get, update, child } from 'firebase/database';
 
 export function FoodDetails() {
-    const [caloriesAscending, setCaloriesAscending] = useState(true);
     const [sortCriterias, setSortCriterias] = useState([]);
     const [FOOD_DETAILS, setFOOD_DETAILS] = useState(null);
+    const [selectedRanking, setSelectedRanking] = useState('calories');
+    const [isDescending, setIsDescending] = useState(false);
 
     const db = getDatabase();
     const FoodDataRef = ref(db, "FoodDetails/FoodDetailsData");
@@ -25,11 +26,7 @@ export function FoodDetails() {
         });
     }, []);
 
-    let sortedByCalories = _.sortBy(FOOD_DETAILS, 'calories');
-
-    function sortCalories() {
-        setCaloriesAscending(!caloriesAscending);
-    }
+    let sortedFoods = _.sortBy(FOOD_DETAILS, selectedRanking);
 
     function filters(event) {
         setSortCriterias(
@@ -44,11 +41,11 @@ export function FoodDetails() {
         window.location.reload();
     }
 
-    if (!caloriesAscending) {
-        _.reverse(sortedByCalories);
+    if (isDescending) {
+        _.reverse(sortedFoods);
     }
 
-    let filteredData = sortedByCalories;
+    let filteredData = sortedFoods;
 
     if (sortCriterias.length > 0) {
         filteredData = filteredData.filter((foodItem) => {
@@ -97,15 +94,28 @@ export function FoodDetails() {
         </div>
     ));
 
+    function handleChangeRanking(event) {
+        setSelectedRanking(event.target.value);
+    }
+    function handleReverse() {
+        setIsDescending(!isDescending);
+    }
+
 
     return (
         <div className="foodDetailsPage">
             <h1>Filter for food dietary details here!</h1>
             <div className="filters">
-                <p>Sort by calories: </p>
-                <input type="checkbox" id="caloriesSort" onClick={sortCalories} />Calories Descending (Default ascending)
+                <h2>Sort foods by criterias: </h2>
+                <select value={selectedRanking} onChange={handleChangeRanking}>
+                    <option value="" disabled>Select a sorting option</option>
+                    <option value="calories">Calories</option>
+                    <option value="ratings">Total Ratings</option>
+                    <option value="avgRatings">Average Rating</option>
+                </select>
+                <input type="checkbox" id="reverseSort" name = "resverseSort" onClick={handleReverse} />Sort by Descending (Defaulted to ascending)
 
-                <p>Include:</p>
+                <h2>Include:</h2>
                 <input type="checkbox" id="seafood" name="seafood" onClick={filters} />Seafood
                 <input type="checkbox" id="veganoption" name="veganoption" onClick={filters} />Vegan Options
                 <input type="checkbox" id="gfoption" name="gfoption" onClick={filters} />Gluten Free Options
